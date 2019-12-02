@@ -1,21 +1,51 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Header from '../components/Header/header'
+import Carrusel from '../components/Carrusel/carrusel'
+import { useStaticQuery, graphql} from "gatsby"
+const IndexPage = () => {
+ const data = useStaticQuery(graphql`
+   query{
+     headerTop:file(relativePath: {eq: "assets/logoLine.png"}) {
+      childImageSharp {
+        fluid(maxHeight: 900) {
+          originalName
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    headerBot: file(relativePath: {eq: "assets/inicio.jpg"}) {
+      childImageSharp {
+        fluid(maxHeight:600){
+          originalName
+          ...GatsbyImageSharpFluid_withWebp
 
-const IndexPage = () => (
-  <Layout>
+        }
+      }
+    }
+   product: allFile(filter:{absolutePath:{regex:"/images/galery/"}}) {
+      edges{
+       node{
+         childImageSharp{
+           fluid{
+             originalName
+             ...GatsbyImageSharpFluid
+           }
+         }
+       }
+     }
+     }
+   }
+ `)
+  return(
+    <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Header topImage={data.headerTop} botImage={data.headerBot}/>
+    <Carrusel images={data.product}/>
   </Layout>
-)
+  )
+ 
+}
 
 export default IndexPage
