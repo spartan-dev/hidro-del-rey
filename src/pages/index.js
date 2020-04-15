@@ -2,14 +2,15 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from '../components/Header/header'
-import Carrusel from '../components/Carrusel/carrusel'
+import '../utils/fontAwesome'
+
 import { useStaticQuery, graphql} from "gatsby"
 const IndexPage = () => {
  const data = useStaticQuery(graphql`
    query{
      headerTop:file(relativePath: {eq: "assets/logoLine.png"}) {
       childImageSharp {
-        fluid(maxHeight: 900) {
+        fluid(maxHeight: 600) {
           originalName
           ...GatsbyImageSharpFluid
         }
@@ -41,8 +42,7 @@ const IndexPage = () => {
   return(
     <Layout>
     <SEO title="Home" />
-    <Header topImage={data.headerTop} botImage={data.headerBot}/>
-    <Carrusel images={data.product}/>
+    <Header topImage={data.headerTop} botImage={data.headerBot} images={data.product}/>
   </Layout>
   )
  

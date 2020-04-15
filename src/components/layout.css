@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Vollkorn;
+  src: url(../fonts/Vollkorn/Vollkorn-Regular.ttf);
+}
+@font-face{
+  font-family: Vollkorn SC;
+  src:url(../fonts/Vollkorn/VollkornSC-Regular.ttf)
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

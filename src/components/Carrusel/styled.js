@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const CarruselContainer = styled.div`
-background-color: #000000;
+background-color: #fafafa;
 height: auto;
 padding: 20px 10px 20px 10px;
 a{
