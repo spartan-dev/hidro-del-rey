@@ -1,14 +1,13 @@
 import React from "react"
-import { HeaderContainer, TopHeader, BottomHeader,NavHeader } from "./styled"
+import { HeaderContainer, TopHeader,NavHeader } from "./styled"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Searchin from '../Common/Search/SearchIn'
 import Img from "gatsby-image"
-import Carrusel from "../Carrusel/carrusel"
 const Header = ({ topImage, botImage, images }) => (
   <HeaderContainer>
     <TopHeader>
       <div>
-        <Img fluid={topImage.childImageSharp.fluid} />
+        <Img fluid={topImage.childImageSharp.fluid} alt ={topImage.childImageSharp.fluid.originalName}/>
       </div>
       <nav>
            <Searchin icon="search"/>
@@ -24,9 +23,7 @@ const Header = ({ topImage, botImage, images }) => (
           <li>Productos</li>
         </ul>
       </NavHeader>
-    {/* <BottomHeader>
-      <Carrusel images={images} />
-    </BottomHeader> */}
+   
   </HeaderContainer>
 )
 

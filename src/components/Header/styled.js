@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const HeaderContainer = styled.div`
-  height: 100vh;
+  height: 50vh;
   background-color: #fafafa;
 `
 const TopHeader = styled.div`
@@ -56,10 +56,5 @@ display: flex;
             color: #000000;
             }
 `
-const BottomHeader = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-export { HeaderContainer, TopHeader, BottomHeader, NavHeader }
+
+export { HeaderContainer, TopHeader, NavHeader }

@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from '../components/Header/header'
+import MainSection from '../components/MainSection/mainSection'
+import BestSeller from '../components/BestSellers/bestSellers'
 import '../utils/fontAwesome'
 
 import { useStaticQuery, graphql} from "gatsby"
@@ -16,11 +18,11 @@ const IndexPage = () => {
         }
       }
     }
-    headerBot: file(relativePath: {eq: "assets/inicio.jpg"}) {
+    headerBot: file(relativePath: {eq: "assets/productos2.jpg"}) {
       childImageSharp {
-        fluid(maxHeight:600){
+        fluid( maxWidth:1000){
           originalName
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid
 
         }
       }
@@ -42,7 +44,9 @@ const IndexPage = () => {
   return(
     <Layout>
     <SEO title="Home" />
-    <Header topImage={data.headerTop} botImage={data.headerBot} images={data.product}/>
+    <Header topImage={data.headerTop} images={data.product}/>
+    <MainSection image={data.headerBot}/>
+    <BestSeller images={data.product}/>
   </Layout>
   )
  
