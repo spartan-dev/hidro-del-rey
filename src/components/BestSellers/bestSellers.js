@@ -1,9 +1,18 @@
 import React from 'react'
-import {SellerSection} from './styledBestSellers'
+import {SellerSection,HeaderContainer,CardContainer} from './styledBestSellers'
+import Cards from '../Common/Cards/Cards'
 const bestSellers = ({images}) => {
   return (
     <SellerSection>
-      <h1>Best sellers section</h1>
+      <HeaderContainer>
+      <h1>Los mas vendidos</h1>
+      </HeaderContainer>
+      <CardContainer>
+      <Cards/>
+      <Cards/>
+      <Cards/>
+      </CardContainer>
+     
     </SellerSection>
   )
 }
