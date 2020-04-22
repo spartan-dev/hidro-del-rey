@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
  const Main = styled.div`
+  
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -16,7 +17,9 @@ import styled from 'styled-components'
   }
 `
 const MarcoImage = styled.div`
-width:1000px;
+width:1059px;
+height:533px;
+border-radius:4px;
 
 `
 

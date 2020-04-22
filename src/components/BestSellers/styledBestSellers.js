@@ -2,7 +2,7 @@ import styled from 'styled-components'
 const SellerSection = styled.div`
 margin: 2em;
 padding:2em;
-width: inherit;
+//width: inherit;
 `
 const HeaderContainer = styled.div`
 h1{
