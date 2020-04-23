@@ -21,11 +21,11 @@ const footer = () => {
             flexDirection: "row",
             justifyContent: "space-between",
             }} className="uk-flex uk-flex-center">
-            <a href="https://wa.me/5217151066566"  target="_blank"> <img src={Whats} alt="Whatsapp"/></a>
-            <a href="https://www.facebook.com">
+            <a href="https://wa.me/5217151066566"  target="_blank" rel="noopener noreferrer" > <img src={Whats} alt="Whatsapp"/></a>
+            <a href="https://es-la.facebook.com/hidromieldelrey">
               <img style={{width:"38px", height:"38px"}} src={Face} alt="face link"/>
             </a>
-            <a href=""> <img style={{width:"38px", height:"38px"}} src={Insta} alt="instagram link"/></a>
+            <a href="https://www.instagram.com/hidromiel_del_rey/"> <img style={{width:"38px", height:"38px"}} src={Insta} alt="instagram link"/></a>
           </FootBox>
       </FContainer>
     </Footer>

@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
  const Main = styled.div`
-  
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  heigth: auto;
+  margin-bottom:3em;
   h1 {
     font-family: Vollkorn SC;
     color: #000000;
@@ -17,10 +18,8 @@ import styled from 'styled-components'
   }
 `
 const MarcoImage = styled.div`
-width:1059px;
-height:533px;
 border-radius:4px;
-
+width:70%
 `
 
 export {Main, MarcoImage}

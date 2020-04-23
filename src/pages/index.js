@@ -12,32 +12,20 @@ const IndexPage = () => {
    query{
     headerBot: file(relativePath: {eq: "assets/productos2.jpg"}) {
       childImageSharp {
-        fluid( maxWidth:1000){
+        fluid(maxWidth:1050){
           originalName
           ...GatsbyImageSharpFluid
-
         }
       }
     }
-   product: allFile(filter:{absolutePath:{regex:"/images/galery/"}}) {
-      edges{
-       node{
-         childImageSharp{
-           fluid{
-             originalName
-             ...GatsbyImageSharpFluid
-           }
-         }
-       }
      }
-     }
-   }
+    
  `)
   return(
     <Layout>
     <SEO title="Home" />
     <MainSection image={data.headerBot}/>
-    <BestSeller images={data.product}/>
+    <BestSeller/>
     <Advertising/>
   </Layout>
   )
