@@ -1,6 +1,7 @@
 import React from "react"
 import { HeaderContainer, TopHeader,NavHeader } from "./styled"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {Link} from 'gatsby'
 import Searchin from '../Common/Search/SearchIn'
 import Img from "gatsby-image"
 const Header = ({ topImage, botImage, images }) => (
@@ -18,7 +19,7 @@ const Header = ({ topImage, botImage, images }) => (
     </TopHeader>
     <NavHeader>
         <ul>
-          <li>Historia</li>
+          <li> <Link to="/history">Historia</Link></li>
           <li>Caracteristicas</li>
           <li>Productos</li>
         </ul>
