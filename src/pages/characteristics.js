@@ -1,14 +1,15 @@
 import React from "react"
+import { PageTitle } from "../components/Common/PageTitle"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import LargeCard from "../components/Common/LargeCard/LargeCard"
 import Container from "../components/Common/Container"
-import { PageTitle } from "../components/Common/PageTitle"
 import { useStaticQuery, graphql } from "gatsby"
-const History = () => {
+
+const Characteristics = () => {
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { relativeDirectory: { eq: "history" } }) {
+      allFile(filter: { relativeDirectory: { eq: "chars" } }) {
         edges {
           node {
             childImageSharp {
@@ -26,36 +27,36 @@ const History = () => {
   const left = "uk-card-media-left uk-cover-container"
   return (
     <Layout>
-      <SEO title="Hidromiel History" />
+      <SEO title="Hidromiel del rey Characteristics" />
       <Container className="uk-container uk-container-xlarge" uk-grid="true">
         <div>
-          <PageTitle>Inicio &#62; Historia</PageTitle>
+          <PageTitle>Inicio &#62; Caracter&iacute;sticas</PageTitle>
         </div>
         <div style={{ padding: "2em" }}>
           <LargeCard
             image={data.allFile.edges[0]}
             side={left}
-            content="El primer lote de hidromiel fue accidental como muchos de los grandes descubrimientos, nace a través de lo inesperado."
+            content="La hidromiel se fermenta con tres ingredientes básicos: miel, levadura y agua y se distingue en su propio ramo de bebidas alcohólicas."
           />
           <LargeCard
             image={data.allFile.edges[1]}
             side={right}
-            content="Conocido como el “néctar de los dioses” en la antigua grecia , se creía que el hidromiel era rocío envíado de los cielos y recogido por las abejas."
+            content="Dulce, seca y fuerte son algunas de sus clasificaciones , también se puede combinar con ingredientes como moras, durazno, sidra, entre otros."
           />
           <LargeCard
             image={data.allFile.edges[2]}
             side={left}
-            content="En la mitología Nórdica “heidrum” era una cabra que amamantaba a los dioses con hidromiel."
+            content="La miel utilizada determina el sabor general de la hidromiel y puede variar segun el néctar y polen de una abeja ."
           />
           <LargeCard
             image={data.allFile.edges[3]}
             side={right}
-            content="Vasijas de cerámica sugieren la evidencia de fermentación de hidromiel. Globalmente popular entre vikingos, mayas, egipcios, griegos y romanos."
+            content="Metheglin es un tipo de hidromiel que se elabora con infusión de hierbas, utilizada como medicina alternatica para la digestión, ansiedad y depresión."
           />
           <LargeCard
             image={data.allFile.edges[4]}
             side={left}
-            content="El origen de la “luna de miel” surge de la tradición medieval de beber vino de miel para un ciclo de luna llena después de un nuevo matrimonio."
+            content="Porsee un agradable y burbujeante sabor agridulce "
           />
         </div>
       </Container>
@@ -63,4 +64,4 @@ const History = () => {
   )
 }
 
-export default History
+export default Characteristics
