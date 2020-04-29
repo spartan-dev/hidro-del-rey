@@ -16,7 +16,7 @@ const Cards = ({ title, text, bottles,image, price,showButtons }) => {
       </CardImage>
       <CardTitle>{title}</CardTitle>
       <CardInfo>
-  {bottles ? <p>Caja con 24 botellas de 350ml c/u.<br /></p>: null}
+  {bottles ? <>Caja con 24 botellas de 350ml c/u.<br /></>: null}
         {text}
       </CardInfo>
       <span>{`$ ${price} MXN`}</span>
