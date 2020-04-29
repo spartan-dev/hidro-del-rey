@@ -7,7 +7,8 @@ import {
   CardButtonContainer,
 } from "./styledCards"
 import Button from "../Button"
-const Cards = ({ title, text, image, price }) => {
+import Img from 'gatsby-image'
+const Cards = ({ title, text, bottles,image, price,showButtons }) => {
   return (
     <ContainerCard>
       <CardImage>
@@ -15,12 +16,12 @@ const Cards = ({ title, text, image, price }) => {
       </CardImage>
       <CardTitle>{title}</CardTitle>
       <CardInfo>
-        Caja con 24 botellas de 350ml c/u. <br />
+  {bottles ? <p>Caja con 24 botellas de 350ml c/u.<br /></p>: null}
         {text}
       </CardInfo>
       <span>{`$ ${price} MXN`}</span>
       <CardButtonContainer>
-        <form className="uk-form uk-form-stacked">
+        {showButtons ? (<form className="uk-form uk-form-stacked">
           <div className="uk-form-row">
             <div className="uk-form-controls">
               <input
@@ -31,7 +32,8 @@ const Cards = ({ title, text, image, price }) => {
               <Button>agregar</Button>
             </div>
           </div>
-        </form>
+        </form>) : (null)}
+        
       </CardButtonContainer>
     </ContainerCard>
   )

@@ -4,12 +4,13 @@ import MiniLogo from '../../images/assets/logoRed.png'
 import Whats from '../../images/icons/whats.svg'
 import Face from '../../images/icons/face.svg'
 import Insta from '../../images/icons/insta.svg'
+import {Link} from 'gatsby'
 const footer = () => {
   return (
     <Footer>
       <FContainer className="uk-flex">
         <FootBox style={{width:"187px",height:"162px"}}>
-          <img src={MiniLogo} alt="Hidromiel del rey" sizes="" />
+          <Link to="/"><img src={MiniLogo} alt="Hidromiel del rey" sizes="" /></Link>
         </FootBox>
         <FootBox  className="uk-flex uk-flex-center" style={{width:"403px",height:"60px"}}>
           <span>By Marc Tello</span>

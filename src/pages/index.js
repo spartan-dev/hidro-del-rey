@@ -12,7 +12,7 @@ const IndexPage = () => {
    query{
     headerBot: file(relativePath: {eq: "assets/productos2.jpg"}) {
       childImageSharp {
-        fluid(maxWidth:1050){
+        fluid(maxWidth:1000){
           originalName
           ...GatsbyImageSharpFluid
         }

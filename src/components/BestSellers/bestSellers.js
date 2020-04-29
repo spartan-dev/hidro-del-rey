@@ -15,18 +15,24 @@ const BestSellers = () => {
       <Cards 
       title="Hidromiel Acre" 
       text="fermento de miel de abeja 100% natural con 
-      durazno que posee un sabor agridulce" 
+      durazno que posee un sabor agridulce"
+      bottles={true} 
        image={Prod1}
+       showButtons={true}
       price="1,080"/>
       <Cards
        title="Hidromiel Aureum" 
        text="La hidromiel Aureum es un fermento con toques frutales y aflorados." 
         image={Prod2}
+        bottles={true}
+        showButtons={true}
        price="1,920"/>
       <Cards
        title="Hidromiel Berserker (Clásica)" 
        text="fermento de miel de abeja 100% natural, acompañado de la 
        sensación burbujeante típica de una hidromiel joven" 
+       bottles={true}
+       showButtons={true}
         image={Prod3}
        price="1,080"/>
       </CardContainer>

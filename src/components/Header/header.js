@@ -8,10 +8,12 @@ const Header = ({ topImage, botImage, images }) => (
   <HeaderContainer>
     <TopHeader>
       <div>
+        <Link to="/">
         <Img
           fluid={topImage.childImageSharp.fluid}
           alt={topImage.childImageSharp.fluid.originalName}
         />
+        </Link>
       </div>
       <nav>
         <Searchin icon="search" />

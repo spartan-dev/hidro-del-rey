@@ -24,7 +24,6 @@ color: #000000;
 const CardImage = styled.div`
 width: inherit;
 height: inherit;
-
 `
 const CardTitle = styled.h3`
 font-family: Vollkorn SC;
