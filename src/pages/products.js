@@ -14,8 +14,27 @@ import {
   AsideTextSection
 } from "../components/Products.components/productsStyles"
 import SEO from "../components/seo"
+import {useStaticQuery,graphql} from 'gatsby'
 const Products = () => {
   const [ visible, setVisible ] = useState("AllCards")
+
+const data = useStaticQuery(graphql`
+query{
+ allFile(filter: {relativeDirectory: {eq: "galery"}}) {
+ edges {
+   node {
+     childImageSharp {
+       fixed(width: 383, height: 381) {
+         originalName
+         ...GatsbyImageSharpFixed
+       }
+     }
+   }
+ }
+}
+}
+`)
+const {edges} = data.allFile
   return (
     <Layout>
       <SEO title="Hidromiel del rey Products" />
@@ -45,7 +64,7 @@ const Products = () => {
             <CardSection>
               <aside>
                 <Container>
-                  {visible === "AllCards" ? <AllCards/> : null ||
+                  {visible === "AllCards" ? <AllCards images={edges}/> : null ||
                    visible === "HidroBarrel"?  <HidroBarrel/>:null ||
                    visible === "CrystaHorn" ? <CrystaHorn/>:null}
                 </Container>

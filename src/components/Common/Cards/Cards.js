@@ -7,7 +7,6 @@ import {
   CardButtonContainer,
 } from "./styledCards"
 import Button from "../Button"
-import Img from 'gatsby-image'
 const Cards = ({ title, text, bottles,image, price,showButtons }) => {
   return (
     <ContainerCard>
