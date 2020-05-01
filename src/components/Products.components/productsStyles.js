@@ -4,10 +4,11 @@ const MainContainer = styled.div`
 display:flex;
 `
 const BottonSection = styled.section`
-width:50%;
+width:fit-content;
+margin-right:2em;
 `
 const CardSection = styled.section`
-width:50%;
+width:max-content;
 `
 const BigButton = styled.div`
 width: 350px;
@@ -41,11 +42,17 @@ line-height: 50px;
 text-align: center;
 color: #000000;
 `
+const AllCardsContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+`
 export {
   MainContainer,
   BottonSection, 
   BigButton, 
   CardSection,
   TextAsideContainer,
-  AsideTextSection
+  AsideTextSection,
+  AllCardsContainer
 }

@@ -13,6 +13,7 @@ import Clasica from '../../images/galery/12clasica.jpg'
 
 const compoCards = [
   {
+    img:Acre,
     title: "Hidromiel Acre",
     text:
       "fermento de miel de abeja 100% natural con durazno que posee un sabor agridulce",
@@ -21,6 +22,7 @@ const compoCards = [
     showButtons: true,
   },
   {
+    img:Aureum,
     title: "Hidromiel Aureum",
     text: "La hidromiel Aureum es un fermento con toques frutales y aflorados.",
     bottles: true,
@@ -28,6 +30,7 @@ const compoCards = [
     showButtons: true,
   },
   {
+    img:Berserker,
     title: "Hidromiel Berserker (Clásica)",
     text:
       "Fermento de miel de abeja 100% natural, acompañado de la sensación burbujeante típica de una hidromiel joven",
@@ -36,6 +39,7 @@ const compoCards = [
     showButtons: true,
   },
   {
+    img:WitchBlood,
     title: "Hidromiel Witch blood",
     text: "Hidromiel Witch blood con Zarza que posee un sabor agridulce",
     bottles: true,
@@ -43,6 +47,7 @@ const compoCards = [
     showButtons: true,
   },
   {
+    img:Pyment,
     title: "Hidromiel Pyment",
     text: "Hidromiel Pyment que contiene un toque de jugo de uva ",
     bottles: true,
@@ -50,6 +55,7 @@ const compoCards = [
     showButtons: true,
   },
   {
+    img:Camazotz,
     title: "Hidromiel Camazotz",
     text: "Hidromiel con Cacao, que posee un sabor agridulce",
     bottles: true,
@@ -57,6 +63,7 @@ const compoCards = [
     showButtons: true,
   },
   {
+    img:Caballeros,
     title: "Hidromiel Caballeros negros",
     text:
       "Hidromiel de Caballeros Negros es un fermento de miel de abeja 100% natural con Café",
@@ -65,6 +72,7 @@ const compoCards = [
     showButtons: true,
   },
   {
+    img:Pumpkin,
     title: "Hidromiel Pumpkin ",
     text:
       "Posee un sabor agridulce acompañado de la sensación burbujeante típica de una hidromiel joven ",
@@ -73,6 +81,7 @@ const compoCards = [
     showButtons: true,
   },
   {
+    img:Once,
     title: "Hidromiel Once (especiada)",
     text: " Hidromiel Once, elaborada con especias que le dan un toque único",
     bottles: true,
@@ -80,6 +89,7 @@ const compoCards = [
     showButtons: true,
   },
   {
+    img:STPatrick,
     title: "Hidromiel San Patricio",
     text:
       "Fermento de abeja 100% natural que posee un sabor agridulce con temática de san patricio",
@@ -88,13 +98,15 @@ const compoCards = [
     showButtons: true,
   },
   {
+    img:Hipocras,
     title: "Hidromiel Hipocrás ",
     text: "Hidromiel con canela, clavo y especias que posee un sabor agridulce",
     bottles: true,
     price: "1,080",
     showButtons: true,
   },
-  {
+  { 
+    img:Clasica,
     title: "Hidromiel Clasica ",
     text: "Fermento de miel con especias y nuestro mejorado metodo e inigualable sabor!",
     bottles: true,

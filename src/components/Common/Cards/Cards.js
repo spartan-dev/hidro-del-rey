@@ -7,11 +7,13 @@ import {
   CardButtonContainer,
 } from "./styledCards"
 import Button from "../Button"
+import Img from 'gatsby-image'
 const Cards = ({ title, text, bottles,image, price,showButtons }) => {
   return (
     <ContainerCard>
       <CardImage>
-        <img style ={{width:"fit-content", height:"320px"}} src={image} alt="producto" />
+        <img style ={{width:"fit-content", height:"320px"}} src={image} alt={title} />
+        {/* <Img fixed={image}/> */}
       </CardImage>
       <CardTitle>{title}</CardTitle>
       <CardInfo>

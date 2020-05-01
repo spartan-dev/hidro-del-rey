@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 
 import {
   ContainerLargeCard,
-  LargeCardPortrait,
+  
   CardContent,
 } from "./styledLargeCard"
 const LargeCard = ({ image,side, content }) => {

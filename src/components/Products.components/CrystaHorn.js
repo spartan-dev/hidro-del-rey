@@ -1,21 +1,21 @@
 import React from 'react'
 import Card from "../Common/Cards/Cards"
 import Horn from '../../images/assets/horn.jpg'
-import { useStaticQuery, graphql} from "gatsby"
+//import { useStaticQuery, graphql} from "gatsby"
 
 const CrystaHorn = () => {
-  const data = useStaticQuery(graphql`
-  query{
-    file(relativePath: {eq: "assets/horn.jpg"}) {
-    childImageSharp {
-      fluid(maxHeight: 600) {
-        originalName
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  }
-  `)
+  // const data = useStaticQuery(graphql`
+  // query{
+  //   file(relativePath: {eq: "assets/horn.jpg"}) {
+  //   childImageSharp {
+  //     fluid(maxHeight: 600) {
+  //       originalName
+  //       ...GatsbyImageSharpFluid
+  //     }
+  //   }
+  // }
+  // }
+  // `)
   return (
     <div>
       <Card

@@ -17,7 +17,6 @@ import SEO from "../components/seo"
 import {useStaticQuery,graphql} from 'gatsby'
 const Products = () => {
   const [ visible, setVisible ] = useState("AllCards")
-
 const data = useStaticQuery(graphql`
 query{
  allFile(filter: {relativeDirectory: {eq: "galery"}}) {
