@@ -6,6 +6,9 @@ display:flex;
 const BottonSection = styled.section`
 width:fit-content;
 margin-right:2em;
+.active > BigButton{
+  background:red
+}
 `
 const CardSection = styled.section`
 width:max-content;
@@ -13,7 +16,7 @@ width:max-content;
 const BigButton = styled.div`
 width: 350px;
 height: 132px;
-background: #FFFFFF;
+background:${props => props.visible ? "rgba(218, 168, 66, 0.72)":"#ffffff"};
 box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.16), 0px 2px 5px rgba(0, 0, 0, 0.26);
 font-family: Vollkorn SC;
 font-style: normal;
@@ -26,6 +29,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 cursor:pointer;
+
+
+/* &:hover{background: rgba(218, 168, 66, 0.72);} */
 `
 const TextAsideContainer = styled.div`
 margin-top:3.3em;
@@ -46,7 +52,9 @@ const AllCardsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-left:${props => props.oneCard? "2em":"0px"};
 `
+
 export {
   MainContainer,
   BottonSection, 

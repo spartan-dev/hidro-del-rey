@@ -1,6 +1,8 @@
 import React from 'react'
 import Card from "../Common/Cards/Cards"
 import Barrel from '../../images/assets/barril.jpg'
+import {AllCardsContainer} from './productsStyles'
+
 //import { useStaticQuery, graphql} from "gatsby"
 const HidroBarrel = () => {
   // const data = useStaticQuery(graphql`
@@ -16,7 +18,7 @@ const HidroBarrel = () => {
   // }
   // `)
   return (
-    <div>
+    <AllCardsContainer oneCard>
       <Card
       title="Barril Desechable"
       text="Barril salida d 
@@ -26,7 +28,7 @@ const HidroBarrel = () => {
       bottles={false}
       showButtons={false}
       />
-    </div>
+    </AllCardsContainer>
   )
 }
 

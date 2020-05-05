@@ -46,9 +46,9 @@ const {edges} = data.allFile
             <BottonSection>
               <aside>
                 <div>
-                  <BigButton onClick={()=> setVisible("AllCards")}>Hidromiel</BigButton>
-                  <BigButton onClick={()=> setVisible("HidroBarrel")}>Barril <br/> Desechable</BigButton>
-                  <BigButton onClick={()=> setVisible("CrystaHorn") }>Cuerno de <br/>Cristal</BigButton>
+                  <BigButton visible = {visible === "AllCards" ? true:false} onClick={()=> setVisible("AllCards")}>Hidromiel</BigButton>
+                  <BigButton visible = {visible === "HidroBarrel" ? true:false}  onClick={()=> setVisible("HidroBarrel")}>Barril <br/> Desechable</BigButton>
+                  <BigButton visible = {visible === "CrystaHorn" ? true:false}   onClick={()=> setVisible("CrystaHorn") }>Cuerno de <br/>Cristal</BigButton>
                 </div>
                 <TextAsideContainer>
                   <AsideTextSection>

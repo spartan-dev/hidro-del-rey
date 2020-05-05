@@ -18,27 +18,43 @@ const Header = ({ topImage, botImage, images }) => (
       <nav>
         <Searchin icon="search" />
         <span style={{ width: "200px" }}>
+          <Link to="/store">
           <FontAwesomeIcon
             style={{ color: "#000000", height: "25px", width: "25px" }}
             icon={"shopping-cart"}
-          />
+          /></Link>
         </span>
       </nav>
     </TopHeader>
     <NavHeader>
       <ul>
-        <li>
+        
           {" "}
-          <Link to="/history">Historia</Link>
-        </li>
-        <li>
+          <Link 
+          style={{color:"#000000",textDecoration:"none"}} 
+          to="/history"
+          activeClassName="active"
+          
+          ><li>Historia</li></Link>
+      
+        
           {" "}
-          <Link to="/characteristics">Caracter&iacute;sticas</Link>
-        </li>
-        <li>
+          <Link  
+          style={{color:"#000000",textDecoration:"none"}}  
+          to="/characteristics"
+          activeClassName="active"
+          partiallyActive={true}
+          ><li>Caracter&iacute;sticas</li></Link>
+        
+        
           {" "}
-          <Link to="/products">Productos</Link>
-        </li>
+          <Link  
+          style={{color:"#000000",textDecoration:"none"}}  
+          to="/products"
+          activeClassName="active"
+          
+          ><li>Productos</li></Link>
+        
       </ul>
     </NavHeader>
   </HeaderContainer>

@@ -5,7 +5,7 @@ import styled from 'styled-components'
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  heigth: auto;
+  height: auto;
   margin-bottom:3em;
   h1 {
     font-family: Vollkorn SC;
