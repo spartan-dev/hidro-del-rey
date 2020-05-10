@@ -1,27 +1,32 @@
-import React,{useContext} from "react"
+import React,{useContext,useState} from "react"
 import {
   ContainerCard,
   CardImage,
   CardTitle,
   CardInfo,
   CardButtonContainer,
+  QtySelect
 } from "./styledCards"
 import Button from "../Button"
 import {GlobalDispatchContext, GlobalStateContext} from '../../../context/storeContext'
+
 const Cards = ({ title, text, bottles, image, price, showButtons }) => {
   const state  = useContext(GlobalStateContext)
   const dispatch = useContext(GlobalDispatchContext)
-  let box = {name:title, qty:0,price:0}
+  const [qty, setQty] = useState(1)
+  
+  let box = {name:title, qty,price}
+  
   const handleClick= (e)=>{
-    e.preventDefault()
-    dispatch({type:"ADD_ITEM",shopingCart:box})
-    console.log(state.shopingCart,"en el click")
+    
+    dispatch({type:"ADD_ITEM",shopingCart:box,})
   }
   const handleChange = (e) => {
-   const { value } = e.target
-   box = {name:title, qty:value,price:price}
-   state.shopingCart = [...box]
+   box = {name:title,qty:qty ,price:price}
+   state.shopingCart = [state.shopingCart,box]
    //console.log(state,"en el change")
+    console.log(box)
+    console.log("estas en el change")
   }
   return (
     <ContainerCard>
@@ -46,21 +51,22 @@ const Cards = ({ title, text, bottles, image, price, showButtons }) => {
       <span>{`$ ${price} MXN`}</span>
       <CardButtonContainer>
         {showButtons ? (
-          <form className="uk-form uk-form-stacked">
+          <div className="uk-form uk-form-stacked uk-flex uk-flex-between">
             <div className="uk-form-row">
-              <div className="uk-form-controls">
-                <input
-                  name="qty"
-                  style={{ width: "110px", height: "25px", paddingLeft: "3px" }}
-                  type="number"
-                  placeholder="Pza"
-                  min="0"
-                  onChange={handleChange}
-                />
+              <div className="uk-form-controls uk-flex uk-flex-between uk-flex-middle">
+                <QtySelect>
+                  <button onClick={() => (qty > 1 ? setQty(qty - 1) : null)}
+                  onChange={handleChange}>
+                    -
+                  </button>
+                  <input type="text" disabled value={qty}  />
+                  <button onClick={() => setQty(qty + 1)} 
+                  onChange={handleChange}>+</button>
+                </QtySelect>
                 <Button onClick={handleClick}>agregar</Button>
               </div>
             </div>
-          </form>
+          </div>
         ) : null}
       </CardButtonContainer>
     </ContainerCard>

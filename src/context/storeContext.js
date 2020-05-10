@@ -6,6 +6,7 @@ const initialState = {
   shopingCart:[]
 }
 function reducer (state,action){
+  console.log(action)
   switch (action.type) {
     case "TOGGLE_THEME":{
       return{
@@ -26,6 +27,7 @@ function reducer (state,action){
 
 const GlobalContextProvider = ({children}) =>{
   const [state, dispatch] = useReducer(reducer, initialState)
+  console.log(state.shopingCart,"en store")
   return(
     <GlobalStateContext.Provider value={state}>
         <GlobalDispatchContext.Provider value={dispatch}>
