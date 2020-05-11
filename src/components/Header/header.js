@@ -1,10 +1,14 @@
-import React from "react"
-import { HeaderContainer, TopHeader, NavHeader } from "./styled"
+import React,{useContext} from "react"
+import { HeaderContainer, TopHeader, NavHeader,CarItemsContainer,CarContainer } from "./styled"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
 import Searchin from "../Common/Search/SearchIn"
 import Img from "gatsby-image"
-const Header = ({ topImage, botImage, images }) => (
+import {GlobalStateContext} from '../../context/storeContext'
+const Header = ({ topImage, botImage, images }) => {
+  const state = useContext(GlobalStateContext)
+  
+  return(
   <HeaderContainer>
     <TopHeader>
       <div>
@@ -17,13 +21,19 @@ const Header = ({ topImage, botImage, images }) => (
       </div>
       <nav>
         <Searchin icon="search" />
-        <span style={{ width: "200px" }}>
-          <Link to="/store">
+        <CarContainer>
+        <span style={{}}>
+          <Link to="/store" style={{textDecoration:"none", color:"#000000"}}>
           <FontAwesomeIcon
             style={{ color: "#000000", height: "25px", width: "25px" }}
             icon={"shopping-cart"}
+            size="2x"
+            style={{marginRight:"5px"}}
           /></Link>
         </span>
+        <CarItemsContainer>{state.shopingCart.length}</CarItemsContainer>
+        </CarContainer>
+       
       </nav>
     </TopHeader>
     <NavHeader>
@@ -58,6 +68,7 @@ const Header = ({ topImage, botImage, images }) => (
       </ul>
     </NavHeader>
   </HeaderContainer>
-)
+  )
+}
 
 export default Header

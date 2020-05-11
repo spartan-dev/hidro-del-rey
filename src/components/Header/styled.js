@@ -65,4 +65,21 @@ const NavHeader = styled.nav`
     }
   }
 `
-export { HeaderContainer, TopHeader, NavHeader }
+const CarItemsContainer = styled.span`
+    width: 26px;
+    border: 2px solid black;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#000000;
+`
+const CarContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center !important;
+    margin-left:3em;
+`
+export { HeaderContainer, TopHeader, NavHeader, CarItemsContainer,CarContainer }
