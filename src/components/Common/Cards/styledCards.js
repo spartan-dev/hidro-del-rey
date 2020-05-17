@@ -67,7 +67,7 @@ const QtySelect = styled.div`
   background: #FFFFFF;
   box-sizing: border-box;
   border-radius: 3px;
-  height:35px;
+  height:1.9em;
   margin-right:2em;
   button {
     background: #FFFFFF;
@@ -76,7 +76,7 @@ const QtySelect = styled.div`
     padding: 0 10px;
     background-color: transparent;
     max-width: 70px;
-    height: 40px;
+   /*  height: 40px; */
     display: flex;
     justify-content: center;
     align-items: center;

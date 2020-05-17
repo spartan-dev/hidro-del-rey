@@ -20,7 +20,7 @@ const AllCards = ({ images }) => {
          )
        })) 
        :
-       (<div><h1>Estamos trabajando en ello</h1>
+       (<div><h1>Estamos trabajando!!</h1>
         <span uk-spinner="ratio: 4.5"></span> </div>)}
     </AllCardsContainer>
       

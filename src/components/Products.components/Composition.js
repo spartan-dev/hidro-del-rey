@@ -10,6 +10,7 @@ import Once from '../../images/galery/09onceEspeciada.jpg'
 import STPatrick from '../../images/galery/10san_patricio.jpg'
 import Hipocras from '../../images/galery/11hipocras.jpg'
 import Clasica from '../../images/galery/12clasica.jpg'
+const formatNumber=(num)=> num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
 
 const compoCards = [
   {
@@ -18,7 +19,7 @@ const compoCards = [
     text:
       "fermento de miel de abeja 100% natural con durazno que posee un sabor agridulce",
     bottles: true,
-    price: "1,080",
+    price: formatNumber(1080) ||1080,
     showButtons: true,
   },
   {

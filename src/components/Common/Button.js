@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 
 export default styled.button`
-// background-color:#D3AE5D;
+/* background-color:#D3AE5D; */
 background-color: rgba(238, 220, 61, 0.87);
 color:#000000;
 border-radius:8px;
 margin: 5px;
+padding:0.98em;
 box-sizing: border-box;
-    height:30px;
-    width:120px;
+    height:auto;
+    width:auto;
     text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;

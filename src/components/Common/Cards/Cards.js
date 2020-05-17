@@ -15,14 +15,13 @@ const Cards = ({ title, text, bottles, image, price, showButtons }) => {
   const dispatch = useContext(GlobalDispatchContext)
   const [qty, setQty] = useState(1)
   
-  let box = {name:title, qty,price}
+  let box = {name:title, qty,price,image}
   
-  const handleClick= (e)=>{
-    
+  const handleClick= ()=>{
     dispatch({type:"ADD_ITEM",shopingCart:box,})
   }
-  const handleChange = (e) => {
-   box = {name:title,qty:qty ,price:price}
+  const handleChange = () => {
+   box = {name:title,qty:qty ,price:price,image:image}
    state.shopingCart = [state.shopingCart,box]
    //console.log(state,"en el change")
     console.log(box)
@@ -36,7 +35,6 @@ const Cards = ({ title, text, bottles, image, price, showButtons }) => {
           src={image}
           alt={title}
         />
-        {/* <Img fixed={image}/> */}
       </CardImage>
       <CardTitle>{title}</CardTitle>
       <CardInfo>
@@ -63,7 +61,9 @@ const Cards = ({ title, text, bottles, image, price, showButtons }) => {
                   <button onClick={() => setQty(qty + 1)} 
                   onChange={handleChange}>+</button>
                 </QtySelect>
-                <Button onClick={handleClick}>agregar</Button>
+{/*                 <Button onClick={handleClick}>agregar</Button>
+ */}                <button onClick={handleClick} className="buttonMod uk-width-1-1 uk-button uk-button-small">Agregar</button>
+
               </div>
             </div>
           </div>
