@@ -7,14 +7,13 @@ import {
   CardButtonContainer,
   QtySelect
 } from "./styledCards"
-import Button from "../Button"
 import {GlobalDispatchContext, GlobalStateContext} from '../../../context/storeContext'
 
 const Cards = ({ title, text, bottles, image, price, showButtons }) => {
   const state  = useContext(GlobalStateContext)
   const dispatch = useContext(GlobalDispatchContext)
   const [qty, setQty] = useState(1)
-  
+    
   let box = {name:title, qty,price,image}
   
   const handleClick= ()=>{

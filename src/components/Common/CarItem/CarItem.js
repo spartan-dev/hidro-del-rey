@@ -1,14 +1,22 @@
-import React, { useState } from "react"
+import React, { useState,useContext } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { QtyButton, TotalPrice,ItemTitle } from "../../CarComponents/carStyled"
+import {GlobalDispatchContext, GlobalStateContext} from '../../../context/storeContext'
 
 const CarItem = ({ item }) => {
+  const state  = useContext(GlobalStateContext)
+  const dispatch = useContext(GlobalDispatchContext)
   const [qty, setQty] = useState(1)
+  console.log(item,"listas llegasadas")
   const handleChange = () => {
     /*  box = {name:title,qty:qty ,price:price,image:image}
     state.shopingCart = [state.shopingCart,box] */
     //console.log(state,"en el change")
     console.log("estas en el change")
+  }
+  const handleDelete = (idx) => {
+    //dispatch({type:"DELETE_ITEM",shopingCart:state.shopingCart.delete})
+    console.log("numero de box",idx)
   }
   const formatNumber = price => {
     let semi = price.replace(/,/gm, "");
@@ -45,7 +53,7 @@ const CarItem = ({ item }) => {
               +
             </button>
           </QtyButton>
-          <FontAwesomeIcon icon="trash" style={{ color: "#000000" }} />
+          <FontAwesomeIcon onClick={handleDelete} icon="trash" style={{ color: "#000000",cursor:"pointer" }} />
         </div>
       </div>
 

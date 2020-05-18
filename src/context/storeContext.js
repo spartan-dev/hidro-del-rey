@@ -20,6 +20,12 @@ function reducer (state,action){
          shopingCart: [...state.shopingCart, action.shopingCart]
        }
     }
+    case "DELETE_ITEM":{
+      return{
+        ...state,
+        shopingCart:[...state.shopingCart]
+      }
+    }
       default:
         throw new Error("Bad Action Type")
   }

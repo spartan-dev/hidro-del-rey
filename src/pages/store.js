@@ -43,7 +43,7 @@ const Store = () => {
           <div className="uk-flex uk-flex-middle uk-flex-column">
                 <span>TOTAL  $ 1080 MXN</span>
                {/*  <Button>Hacer Pedido</Button> */}
-               <button className=" buttonMod uk-button  uk-button-large">Hacer Pedido</button>
+               <button className="buttonMod uk-button  uk-button-large">Hacer Pedido</button>
 
           </div>
                
