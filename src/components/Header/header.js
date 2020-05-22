@@ -29,6 +29,7 @@ const Header = ({ topImage, botImage, images }) => {
             icon={"shopping-cart"}
             size="2x"
             style={{marginRight:"5px"}}
+            onClick={()=> state.total}
           /></Link>
         </span>
         <CarItemsContainer>{state.shopingCart.length}</CarItemsContainer>

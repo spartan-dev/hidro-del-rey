@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const ShopCarContainer = styled.div`
   flex-direction: row;
@@ -15,7 +15,7 @@ const ShopCarNav = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom:2em;
+  margin-bottom: 2em;
   ul {
     width: 100vw;
     padding: 0;
@@ -40,13 +40,13 @@ const ShopCarNav = styled.div`
 const QtyButton = styled.div`
   display: flex;
   border: 1px solid #000000;
-  background: #FFFFFF;
+  background: #ffffff;
   box-sizing: border-box;
   border-radius: 3px;
-  height:35px;
-  margin-right:2em;
+  height: 35px;
+  margin-right: 2em;
   button {
-    background: #FFFFFF;
+    background: #ffffff;
     box-sizing: border-box;
     border-radius: 3px;
     padding: 0 10px;
@@ -56,12 +56,12 @@ const QtyButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-   border:none;
+    border: none;
   }
   input {
     padding: 0.4rem;
     background-color: transparent;
-    border:none;
+    border: none;
     max-width: 40px;
     max-height: 40px;
     font-family: Vollkorn SC;
@@ -74,23 +74,49 @@ const QtyButton = styled.div`
   }
 `
 const TotalPrice = styled.span`
-font-family: Vollkorn SC;
-font-style: normal;
-font-weight: bold;
-font-size: 22px;
-line-height: 33px;
-text-align: center;
-
-color: #000000;
+  font-family: Vollkorn SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 33px;
+  text-align: center;
+  color: #000000;
 `
 const ItemTitle = styled.p`
-font-family: Vollkorn SC;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 33px;
-text-align: center;
-color: #000000;
+  font-family: Vollkorn SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 33px;
+  text-align: center;
+  color: #000000;
 `
 
-export  { ShopCarContainer, ShopCarNav,QtyButton,TotalPrice,ItemTitle}
+const TotalSpan = styled.span`
+  font-family: Vollkorn SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 42px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 2em;
+`
+const InfoCart = styled.p`
+  font-family: Vollkorn SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 42px;
+  text-align: center;
+  color: #000000;
+`
+export {
+  ShopCarContainer,
+  ShopCarNav,
+  QtyButton,
+  TotalPrice,
+  ItemTitle,
+  TotalSpan,
+  InfoCart
+}

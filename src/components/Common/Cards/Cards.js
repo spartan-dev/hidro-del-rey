@@ -9,22 +9,20 @@ import {
 } from "./styledCards"
 import {GlobalDispatchContext, GlobalStateContext} from '../../../context/storeContext'
 
-const Cards = ({ title, text, bottles, image, price, showButtons }) => {
+const Cards = ({ title, text, bottles, image, price, id,index,showButtons }) => {
   const state  = useContext(GlobalStateContext)
   const dispatch = useContext(GlobalDispatchContext)
   const [qty, setQty] = useState(1)
     
-  let box = {name:title, qty,price,image}
+  let box = {name:title, qty,price,image,id}
   
   const handleClick= ()=>{
     dispatch({type:"ADD_ITEM",shopingCart:box,})
   }
   const handleChange = () => {
-   box = {name:title,qty:qty ,price:price,image:image}
+   box = {name:title,qty:qty ,price:price,image:image,id}
    state.shopingCart = [state.shopingCart,box]
    //console.log(state,"en el change")
-    console.log(box)
-    console.log("estas en el change")
   }
   return (
     <ContainerCard>
@@ -45,7 +43,7 @@ const Cards = ({ title, text, bottles, image, price, showButtons }) => {
         ) : null}
         {text}
       </CardInfo>
-      <span>{`$ ${price} MXN`}</span>
+      <span>{`$ ${parseFloat(price).toFixed(2)} MXN`}</span>
       <CardButtonContainer>
         {showButtons ? (
           <div className="uk-form uk-form-stacked uk-flex uk-flex-between">

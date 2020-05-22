@@ -9,10 +9,11 @@ const AllCards = ({ images }) => {
        {compoCards.length ? (compoCards.map((item,index) => {
          return (
            <Card
-           key={index}
+            key={index}
             title={item.title}
             text={item.text}
             bottles
+            id={item.id}
             image={item.img}
             price={item.price}
             showButtons

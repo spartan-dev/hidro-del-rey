@@ -1,28 +1,33 @@
-import React, { useState,useContext } from "react"
+import React, { useState,useContext,useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { QtyButton, TotalPrice,ItemTitle } from "../../CarComponents/carStyled"
 import {GlobalDispatchContext, GlobalStateContext} from '../../../context/storeContext'
 
-const CarItem = ({ item }) => {
+const CarItem = ({ item } ) => {
   const state  = useContext(GlobalStateContext)
   const dispatch = useContext(GlobalDispatchContext)
-  const [qty, setQty] = useState(1)
-  console.log(item,"listas llegasadas")
+  const [qty, setQty] = useState(item.qty)
+  const [totalis, setTotal] = useState(state.total)
+  let parso = (parseFloat(item.price).toFixed(2) * item.qty)
   const handleChange = () => {
-    /*  box = {name:title,qty:qty ,price:price,image:image}
-    state.shopingCart = [state.shopingCart,box] */
-    //console.log(state,"en el change")
-    console.log("estas en el change")
+   console.log("hanlde chnage")
   }
-  const handleDelete = (idx) => {
-    //dispatch({type:"DELETE_ITEM",shopingCart:state.shopingCart.delete})
-    console.log("numero de box",idx)
+  const handleChangeInput = () => {
+    console.log("estas en change inpit")
   }
+  const handleDelete = (id,item) => {
+    dispatch({type:"DELETE_ITEM", id})
+    setTotal(state.total - (item.price *item.qty))
+    //state.total = state.total - (item.price *item.qty)
+  }
+
   const formatNumber = price => {
+    if(!price) return 0;
     let semi = price.replace(/,/gm, "");
     let total = (parseFloat(semi,2)) * (item.qty);
     return total.toFixed(2)
   }
+  
   return (
     <div
       style={{borderBottom:"1px solid #000000", marginBottom:"2em"}}
@@ -48,31 +53,20 @@ const CarItem = ({ item }) => {
             >
               -
             </button>
-            <input type="number" disabled value={item.qty} />
+              <input type="number" value={qty} onChange={handleChangeInput}/>
             <button onClick={() => setQty(qty + 1)} onChange={handleChange}>
               +
             </button>
           </QtyButton>
-          <FontAwesomeIcon onClick={handleDelete} icon="trash" style={{ color: "#000000",cursor:"pointer" }} />
+          <FontAwesomeIcon onClick={()=> handleDelete(item.id,item)} icon="trash" style={{ color: "#000000",cursor:"pointer" }} />
         </div>
       </div>
 
       <div>
         <div className=" uk-flex uk-flex-center uk-flex-center uk-flex-middle">
-         <TotalPrice>$ {formatNumber(item.price)} MXN</TotalPrice> 
+         <TotalPrice>$ {parso} MXN</TotalPrice> 
         </div>
       </div>
-      {/*    <div>
-        <div
-          className=" uk-grid-match uk-child-width-1-2 uk-grid-collapse uk-child-width-expand@s uk-text-center"
-          uk-grid="true"
-        >
-       
-
-        
-        </div>
-      </div> */}
-    
     </div>
   )
 }

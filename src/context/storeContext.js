@@ -3,10 +3,10 @@ export const GlobalStateContext = createContext()
 export const GlobalDispatchContext = createContext()
 const initialState = {
   theme:"light",
-  shopingCart:[]
+  shopingCart:[],
+  total:0
 }
 function reducer (state,action){
-  console.log(action)
   switch (action.type) {
     case "TOGGLE_THEME":{
       return{
@@ -17,13 +17,13 @@ function reducer (state,action){
     case "ADD_ITEM":{
        return{
          ...state,
-         shopingCart: [...state.shopingCart, action.shopingCart]
+        shopingCart: [...state.shopingCart, action.shopingCart]
        }
     }
     case "DELETE_ITEM":{
       return{
         ...state,
-        shopingCart:[...state.shopingCart]
+         shopingCart: state.shopingCart.filter((item) => item.id !== action.id)
       }
     }
       default:
@@ -33,7 +33,7 @@ function reducer (state,action){
 
 const GlobalContextProvider = ({children}) =>{
   const [state, dispatch] = useReducer(reducer, initialState)
-  console.log(state.shopingCart,"en store")
+  console.log(state.total,"en store")
   return(
     <GlobalStateContext.Provider value={state}>
         <GlobalDispatchContext.Provider value={dispatch}>

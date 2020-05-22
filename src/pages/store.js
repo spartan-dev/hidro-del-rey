@@ -1,12 +1,15 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import Layout from "../components/layout"
 import Container from "../components/Common/Container"
 import SEO from "../components/seo"
-import CarItem from '../components/Common/CarItem/CarItem'
+import {Link} from 'gatsby'
+import CarItem from "../components/Common/CarItem/CarItem"
 import { PageTitle } from "../components/Common/PageTitle"
 import {
   ShopCarContainer,
   ShopCarNav,
+  TotalSpan,
+  InfoCart
 } from "../components/CarComponents/carStyled"
 import {
   GlobalDispatchContext,
@@ -15,8 +18,24 @@ import {
 const Store = () => {
   const dispatch = useContext(GlobalDispatchContext)
   const state = useContext(GlobalStateContext)
+  const [totalis, setTotal] = useState(0)
   const { shopingCart } = state
-  const totalPrice = shopingCart.reduce((acc, curr) => acc + curr.price, 0 )
+  useEffect(() => {
+    totalPrice()
+  })
+  const totalPrice = () => {
+    let semi = shopingCart
+      .map(item => item.price * item.qty)
+      .reduce((acc, current) => acc + current, 0)
+    state.total = semi
+    setTotal(
+      shopingCart
+        .map(item => item.price * item.qty)
+        .reduce((acc, current) => acc + current, 0)
+    )
+    return (state.total = semi)
+  }
+
   return (
     <Layout>
       <SEO title="store hidromiel" />
@@ -32,22 +51,28 @@ const Store = () => {
               <li>Precio</li>
             </ul>
           </ShopCarNav>
-            {shopingCart.length ? (
-              shopingCart.map((item,idx) => {
-               return <CarItem key={idx} item={item}/>
-              })
-            ):(<div><PageTitle>carrito vacio</PageTitle></div>)}
-           
+          {shopingCart.length > 0 ? (
+            shopingCart.map((item, idx) => {
+              return <CarItem key={idx} item={item} />
+            })
+          ) : (
+            <div style={{padding:"2em"}}>
+              <PageTitle>Opsss! parace que no tienes articulos aun!</PageTitle>
+            </div>
+          )}
         </ShopCarContainer>
         <div className="uk-flex uk-flex-right uk-flex-middle">
           <div className="uk-flex uk-flex-middle uk-flex-column">
-                <span>TOTAL  $ 1080 MXN</span>
-               {/*  <Button>Hacer Pedido</Button> */}
-               <button className="buttonMod uk-button  uk-button-large">Hacer Pedido</button>
-
+            <TotalSpan>TOTAL $ {parseFloat(state.total).toFixed(2)} MXN</TotalSpan>
+            <Link to="/pedido">
+              {" "}
+              <button className="buttonMod uk-button  uk-button-large">
+                Hacer Pedido
+              </button>
+            </Link>
           </div>
-               
         </div>
+        <InfoCart>Hacemos envíos a varias partes de la República. <br/>El costo no incluye envío ni IVA.</InfoCart>
       </Container>
     </Layout>
   )
