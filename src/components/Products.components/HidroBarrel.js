@@ -21,7 +21,7 @@ const HidroBarrel = () => {
     <AllCardsContainer oneCard>
       <Card
       title="Barril Desechable"
-      text="Barril salida d 
+      text="Barril salida de 
       petainer desechable con capacidad de 20 litros"
       image={Barrel}
       price="El precio de éste productopuede variar  pregunta por él en nuestras redes sociales"

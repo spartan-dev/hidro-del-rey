@@ -20,15 +20,14 @@ const Header = ({ topImage, botImage, images }) => {
         </Link>
       </div>
       <nav>
-        <Searchin icon="search" />
+       {/*  <Searchin icon="search" /> */}
         <CarContainer>
         <span style={{}}>
           <Link to="/store" style={{textDecoration:"none", color:"#000000"}}>
           <FontAwesomeIcon
-            style={{ color: "#000000", height: "25px", width: "25px" }}
+            style={{ color: "#000000", height: "25px", width: "25px",marginRight:"5px" }}
             icon={"shopping-cart"}
             size="2x"
-            style={{marginRight:"5px"}}
             onClick={()=> state.total}
           /></Link>
         </span>

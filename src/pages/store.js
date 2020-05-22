@@ -12,11 +12,9 @@ import {
   InfoCart
 } from "../components/CarComponents/carStyled"
 import {
-  GlobalDispatchContext,
   GlobalStateContext,
 } from "../context/storeContext"
 const Store = () => {
-  const dispatch = useContext(GlobalDispatchContext)
   const state = useContext(GlobalStateContext)
   const [totalis, setTotal] = useState(0)
   const { shopingCart } = state
@@ -51,7 +49,7 @@ const Store = () => {
               <li>Precio</li>
             </ul>
           </ShopCarNav>
-          {shopingCart.length > 0 ? (
+          {shopingCart.length? (
             shopingCart.map((item, idx) => {
               return <CarItem key={idx} item={item} />
             })
@@ -69,6 +67,7 @@ const Store = () => {
               <button className="buttonMod uk-button  uk-button-large">
                 Hacer Pedido
               </button>
+
             </Link>
           </div>
         </div>

@@ -26,5 +26,7 @@ box-sizing: border-box;
         //border:1px solid #D3AE5D;
         border:1px solid rgba(238, 220, 61, 0.87);
     }
+
+      
 `
 

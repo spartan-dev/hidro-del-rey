@@ -1,4 +1,4 @@
-import React, { useState,useContext,useEffect } from "react"
+import React, { useState,useContext } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { QtyButton, TotalPrice,ItemTitle } from "../../CarComponents/carStyled"
 import {GlobalDispatchContext, GlobalStateContext} from '../../../context/storeContext'
@@ -21,12 +21,12 @@ const CarItem = ({ item } ) => {
     //state.total = state.total - (item.price *item.qty)
   }
 
-  const formatNumber = price => {
+ /*  const formatNumber = price => {
     if(!price) return 0;
     let semi = price.replace(/,/gm, "");
     let total = (parseFloat(semi,2)) * (item.qty);
     return total.toFixed(2)
-  }
+  } */
   
   return (
     <div

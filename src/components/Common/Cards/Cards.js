@@ -54,7 +54,7 @@ const Cards = ({ title, text, bottles, image, price, id,index,showButtons }) => 
                   onChange={handleChange}>
                     -
                   </button>
-                  <input type="text" disabled value={qty}  />
+                  <input type="text" disabled value={qty}/>
                   <button onClick={() => setQty(qty + 1)} 
                   onChange={handleChange}>+</button>
                 </QtySelect>

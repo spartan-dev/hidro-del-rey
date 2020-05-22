@@ -1,9 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
 
 import React, { useEffect } from "react"
 import "./layout.css"
@@ -14,7 +8,6 @@ import { useStaticQuery, graphql } from "gatsby"
 //components
 import Header from "./Header/header"
 import Footer from "./Footer/footer"
-import { CartProvider } from "../context/storeContext"
 const Layout = ({ children }) => {
   useEffect(() => {
     Uikit.use(icons)
