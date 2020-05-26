@@ -1,6 +1,5 @@
 import React, { createContext, useReducer } from "react"
-export const GlobalStateContext = createContext()
-export const GlobalDispatchContext = createContext()
+
 const initialState = {
   theme:"light",
   shopingCart:[],
@@ -42,6 +41,8 @@ const GlobalContextProvider = ({children}) =>{
     </GlobalStateContext.Provider>
   )
 }
+export const GlobalStateContext = createContext(initialState)
+export const GlobalDispatchContext = createContext(initialState)
 export default GlobalContextProvider
 
 

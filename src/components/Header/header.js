@@ -19,7 +19,7 @@ const Header = ({ topImage, botImage, images }) => {
         />
         </Link>
       </div>
-      <nav>
+      <header>
        {/*  <Searchin icon="search" /> */}
         <CarContainer>
         <span style={{}}>
@@ -28,13 +28,13 @@ const Header = ({ topImage, botImage, images }) => {
             style={{ color: "#000000", height: "25px", width: "25px",marginRight:"5px" }}
             icon={"shopping-cart"}
             size="2x"
-            onClick={()=> state.total}
+            //onClick={()=> state.total}
           /></Link>
         </span>
-        <CarItemsContainer>{state.shopingCart.length}</CarItemsContainer>
-        </CarContainer>
+{/*         <CarItemsContainer>{state.shopingCart.length ? state.shopingCart.length:0}</CarItemsContainer>
+ */}        </CarContainer>
        
-      </nav>
+      </header>
     </TopHeader>
     <NavHeader>
       <ul>

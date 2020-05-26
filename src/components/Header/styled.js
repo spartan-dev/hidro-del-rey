@@ -36,6 +36,7 @@ const NavHeader = styled.nav`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom:2em;
   ul {
     width: 100vw;
     padding: 0;
@@ -75,11 +76,11 @@ const CarItemsContainer = styled.span`
     align-items: center;
     color:#000000;
 `
-const CarContainer = styled.div`
+const CarContainer = styled.section`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center !important;
+    justify-content: flex-end;
     margin-left:3em;
 `
 export { HeaderContainer, TopHeader, NavHeader, CarItemsContainer,CarContainer }

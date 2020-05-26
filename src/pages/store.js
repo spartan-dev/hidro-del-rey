@@ -17,17 +17,17 @@ import {
 const Store = () => {
   const state = useContext(GlobalStateContext)
   const [totalis, setTotal] = useState(0)
-  const { shopingCart } = state
+  //const { shopingCart } = state
   useEffect(() => {
     totalPrice()
   })
   const totalPrice = () => {
-    let semi = shopingCart
+    let semi = state.shopingCart
       .map(item => item.price * item.qty)
       .reduce((acc, current) => acc + current, 0)
     state.total = semi
     setTotal(
-      shopingCart
+      state.shopingCart
         .map(item => item.price * item.qty)
         .reduce((acc, current) => acc + current, 0)
     )
@@ -49,8 +49,8 @@ const Store = () => {
               <li>Precio</li>
             </ul>
           </ShopCarNav>
-          {shopingCart.length? (
-            shopingCart.map((item, idx) => {
+          {state.shopingCart? (
+            state.shopingCart.map((item, idx) => {
               return <CarItem key={idx} item={item} />
             })
           ) : (
