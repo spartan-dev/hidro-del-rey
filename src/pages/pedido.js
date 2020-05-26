@@ -34,7 +34,7 @@ const Pedido = () => {
               <InputForm name="nombre" type="text" placeholder="Nombre y Apellido" />
               <InputForm name="telefono" type="text" placeholder="Teléfono" />
               <InputForm name="email" type="text" placeholder="Correo@ejemplo.com" />
-              <InputForm value={state.total} name="cantidad" type="number" disabled/>
+              <InputForm value="6459" name="cantidad" type="number" disabled/>
             </FormSquare>
             <div>
               <button type="submit" className="buttonMod uk-button  uk-button-large">

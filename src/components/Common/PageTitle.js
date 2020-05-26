@@ -8,4 +8,13 @@ const PageTitle = styled.h1`
   line-height: 56px;
   color: #000000;
 `
-export { PageTitle }
+const SuccesTitle = styled.h1`
+ font-family: Vollkorn SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 56px;
+  color: #000000;
+  text-align:center;
+`
+export { PageTitle,SuccesTitle }

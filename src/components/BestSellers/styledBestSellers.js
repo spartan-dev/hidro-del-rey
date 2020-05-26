@@ -20,7 +20,16 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: flex-start;
-width: 100%;
-height: 800px;
+width: auto;
+height: auto;
+@media(max-width:1024px){
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+@media(max-width:768px){
+  flex-direction: column;
+    align-items: center;
+}
 `
 export {SellerSection, HeaderContainer, CardContainer}

@@ -3,6 +3,12 @@ import styled from "styled-components"
 const HeaderContainer = styled.div`
   height: 50vh;
   background-color: #fafafa;
+  @media(max-width:1024px) {
+    height:25vh;
+  }
+  @media(max-width:768px){
+       height:32vh;
+}
 `
 const TopHeader = styled.div`
   height: 205px;
@@ -26,6 +32,9 @@ const TopHeader = styled.div`
     justify-content:flex-end;
     align-items: center;
     padding-right:4em;
+  }
+  @media(max-width:375px){
+    display:none;
   }
 `
 const NavHeader = styled.nav`
@@ -64,6 +73,9 @@ const NavHeader = styled.nav`
       text-decoration: underline;
       text-underline-position: under;
     }
+  }
+  @media(max-width:375px){
+    display:none;
   }
 `
 const CarItemsContainer = styled.span`

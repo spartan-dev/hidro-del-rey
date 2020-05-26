@@ -5,9 +5,20 @@ import Uikit from "uikit"
 import icons from "uikit/dist/js/uikit-icons"
 import "uikit/dist/css/uikit.min.css"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from 'styled-components'
 //components
 import Header from "./Header/header"
 import Footer from "./Footer/footer"
+const Lay = styled.div`
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+position: relative;
+  @media (max-width: 768px) {
+  }
+`
+
 const Layout = ({ children }) => {
   useEffect(() => {
     Uikit.use(icons)
@@ -26,18 +37,11 @@ const Layout = ({ children }) => {
   `)
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <Lay>
         <Header topImage={data.headerTop} images={data.product} />
-        <main>{children}</main>
+        <main style={{ paddingTop: "2em" }}>{children}</main>
         <Footer />
-      </div>
+      </Lay>
     </>
   )
 }
