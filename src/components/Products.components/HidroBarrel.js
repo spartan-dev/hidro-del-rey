@@ -2,21 +2,7 @@ import React from 'react'
 import Card from "../Common/Cards/Cards"
 import Barrel from '../../images/assets/barril.jpg'
 import {AllCardsContainer} from './productsStyles'
-
-//import { useStaticQuery, graphql} from "gatsby"
 const HidroBarrel = () => {
-  // const data = useStaticQuery(graphql`
-  // query{
-  //   file(relativePath: {eq: "assets/barrel.jpg"}) {
-  //   childImageSharp {
-  //     fluid(maxHeight: 600) {
-  //       originalName
-  //       ...GatsbyImageSharpFluid
-  //     }
-  //   }
-  // }
-  // }
-  // `)
   return (
     <AllCardsContainer oneCard>
       <Card

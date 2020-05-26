@@ -33,7 +33,7 @@ function reducer (state,action){
 
 const GlobalContextProvider = ({children}) =>{
   const [state, dispatch] = useReducer(reducer, initialState)
-  console.log(state.total,"en store")
+  console.log(state,"en store")
   return(
     <GlobalStateContext.Provider value={state}>
         <GlobalDispatchContext.Provider value={dispatch}>
