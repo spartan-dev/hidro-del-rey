@@ -30,7 +30,7 @@ const Pedido = () => {
               <div style={{ width: "100%" }} className="uk-flex uk-flex-left">
                 <FormTitle>Solicitud de Datos</FormTitle>
               </div>
-              <input type="hidden" name="Contact Form" value="Contact Form" />
+              <input type="hidden" name="form-name" value="Contact Form" />
               <InputForm name="nombre" type="text" placeholder="Nombre y Apellido" />
               <InputForm name="telefono" type="text" placeholder="Teléfono" />
               <InputForm name="email" type="text" placeholder="Correo@ejemplo.com" />
