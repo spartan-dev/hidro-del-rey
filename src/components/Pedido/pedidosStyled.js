@@ -39,5 +39,6 @@ font-size: 18px;
 line-height: 23px;
 letter-spacing: -1.49012e-09px;
 color: #808080;
+display:${props => props.visible? "none" : null};
 `
 export {TextHeader, FormTitle,FormSquare,InputForm}

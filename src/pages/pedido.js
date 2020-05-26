@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useContext} from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from "../components/Common/Container"
@@ -9,8 +9,11 @@ import {
   FormTitle,
   InputForm,
 } from "../components/Pedido/pedidosStyled"
-
+import {
+  GlobalStateContext,
+} from "../context/storeContext"
 const Pedido = () => {
+  const state = useContext(GlobalStateContext)
   return (
     <Layout>
       <SEO title="pedidos" />
@@ -27,9 +30,11 @@ const Pedido = () => {
               <div style={{ width: "100%" }} className="uk-flex uk-flex-left">
                 <FormTitle>Solicitud de Datos</FormTitle>
               </div>
-              <InputForm type="text" placeholder="Nombre y Apellido" />
-              <InputForm type="text" placeholder="Teléfono" />
-              <InputForm type="text" placeholder="Correo@ejemplo.com" />
+              <input type="hidden" name="Contact Form" value="Contact Form" />
+              <InputForm name="nombre" type="text" placeholder="Nombre y Apellido" />
+              <InputForm name="telefono" type="text" placeholder="Teléfono" />
+              <InputForm name="email" type="text" placeholder="Correo@ejemplo.com" />
+              <InputForm value={state.total} name="cantidad" type="number" disabled/>
             </FormSquare>
             <div>
               <button type="submit" className="buttonMod uk-button  uk-button-large">

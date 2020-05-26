@@ -49,7 +49,7 @@ const Store = () => {
               <li>Precio</li>
             </ul>
           </ShopCarNav>
-          {state.shopingCart? (
+          {state.shopingCart.length? (
             state.shopingCart.map((item, idx) => {
               return <CarItem key={idx} item={item} />
             })

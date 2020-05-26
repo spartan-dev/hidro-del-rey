@@ -11,7 +11,6 @@ const TopHeader = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
   div {
     width: 75vw;
     display: flex;
@@ -19,13 +18,14 @@ const TopHeader = styled.div`
     justify-content: flex-end;
     align-items: flex-start;
   }
-  nav {
-    width: 100vw;
+  header {
+    width: 75vw;
     height: -webkit-fill-available;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:flex-end;
     align-items: center;
+    padding-right:4em;
   }
 `
 const NavHeader = styled.nav`

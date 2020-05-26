@@ -31,8 +31,8 @@ const Header = ({ topImage, botImage, images }) => {
             //onClick={()=> state.total}
           /></Link>
         </span>
-{/*         <CarItemsContainer>{state.shopingCart.length ? state.shopingCart.length:0}</CarItemsContainer>
- */}        </CarContainer>
+        <CarItemsContainer>{state.shopingCart.length ? state.shopingCart.length:0}</CarItemsContainer>
+         </CarContainer>
        
       </header>
     </TopHeader>
