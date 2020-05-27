@@ -7,6 +7,7 @@ const Footer = styled.footer`
   top: 2132px;
   background: #daa842;
   bottom:0;
+
 `
 const FContainer = styled.section`
   padding: 15px 65px 15px 65px;
@@ -14,6 +15,10 @@ const FContainer = styled.section`
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
+  @media(max-width:415px){
+     padding:.70em .70em .70em .70em;
+     margin-top:3em;
+  }
 `
 const FootBox = styled.div`
   font-family: Vollkorn SC;
@@ -27,5 +32,8 @@ const FootBox = styled.div`
     color:transparent;
     
   }
+/*   @media(max-width:415px){
+    height:0;
+  } */
 `
 export { Footer, FContainer, FootBox }

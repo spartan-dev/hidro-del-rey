@@ -15,11 +15,14 @@ import styled from 'styled-components'
     font-size: 33px;
     line-height: 50px;
     text-align: center;
+    @media(max-width:415px){
+        width:80%;
+    }
   }
 `
 const MarcoImage = styled.div`
 border-radius:4px;
-width:70%
+width:70%;
 `
 
 export {Main, MarcoImage}

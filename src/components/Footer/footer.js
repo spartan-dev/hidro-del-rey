@@ -9,7 +9,7 @@ const footer = () => {
   return (
     <Footer>
       <FContainer className="uk-flex">
-        <FootBox style={{width:"187px",height:"162px"}}>
+        <FootBox style={{width:"187px"}}>
           <Link to="/"><img src={MiniLogo} alt="Hidromiel del rey" sizes="" /></Link>
         </FootBox>
         <FootBox  className="uk-flex uk-flex-center" style={{width:"403px",height:"60px"}}>

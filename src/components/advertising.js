@@ -9,8 +9,12 @@ const AdvContainer = styled.div`
   font-size: 36px;
   line-height: 50px;
   text-align: center;
-
   color: #000000;
+  @media(max-width:415px){
+    margin-bottom: 2em;
+    height: auto;
+
+  }
 `
 const advertising = () => {
   return (

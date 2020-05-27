@@ -3,6 +3,7 @@ import styled from "styled-components"
 const HeaderContainer = styled.div`
   height: 50vh;
   background-color: #fafafa;
+
   @media(max-width:1024px) {
     height:25vh;
   }
@@ -23,6 +24,9 @@ const TopHeader = styled.div`
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
+  /*   @media(max-width:415px){
+    display:none;
+  } */
   }
   header {
     width: 75vw;
@@ -32,10 +36,11 @@ const TopHeader = styled.div`
     justify-content:flex-end;
     align-items: center;
     padding-right:4em;
+    @media(max-width:415px){
+    width:90vw;
   }
-  @media(max-width:375px){
-    display:none;
   }
+ 
 `
 const NavHeader = styled.nav`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -74,7 +79,7 @@ const NavHeader = styled.nav`
       text-underline-position: under;
     }
   }
-  @media(max-width:375px){
+  @media(max-width:415px){
     display:none;
   }
 `
@@ -94,5 +99,39 @@ const CarContainer = styled.section`
     align-items: center;
     justify-content: flex-end;
     margin-left:3em;
+    @media(max-width:415px){
+      width:100%;
+      justify-content: space-between;
+      align-items: baseline;
+    }
 `
-export { HeaderContainer, TopHeader, NavHeader, CarItemsContainer,CarContainer }
+
+const MenuContainer = styled.section`
+  width:3em !important;
+  display: none;
+  margin-top: 30px;
+  text-align: right;
+  @media (max-width: 415px) {
+    display: block;
+  }
+`
+const MenuContent = styled.section`
+  ul {
+    background:#d3a341;
+    position: relative;
+    hr{
+      border-top:1px solid #000000 !important;
+    }
+    li {
+      color: #000000;
+      font-family: Vollkorn SC;;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 22px;
+      list-style: none;
+      text-align: center;
+
+    }
+  }
+`
+export { HeaderContainer, TopHeader, NavHeader, CarItemsContainer,CarContainer, MenuContainer,MenuContent }
