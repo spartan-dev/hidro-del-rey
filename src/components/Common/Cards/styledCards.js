@@ -14,7 +14,7 @@ span{
   font-family: Vollkorn SC;
 font-style: normal;
 font-weight: bold;
-font-size: 24px;
+font-size: 18px;
 line-height: 33px;
 text-align: center;
 
@@ -30,7 +30,7 @@ font-family: Vollkorn SC;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
-line-height: 10px;
+line-height: 20px;
 text-align: center;
 color: #000000;
 margin-top:20px;
@@ -49,12 +49,29 @@ color: #000000;
 
 `
 const CardButtonContainer = styled.div`
-width:100%;
+width:90%;
 display: flex;
+flex-direction:column;
 justify-content:center;
     padding: 5px;
     margin: 5px;
     
+`
+const QtyContainer = styled.div`
+display: flex;
+flex-direction:column;
+justify-content:center;
+margin-bottom:1em;
+label{
+  font-family: Vollkorn SC;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+
+color: #000000;
+}
 `
 const QtyButton = styled.button`
   padding: 0.4rem;
@@ -63,12 +80,13 @@ const QtyButton = styled.button`
 `
 const QtySelect = styled.div`
   display: flex;
+  justify-content: space-around;
+
   border: 1px solid #000000;
   background: #FFFFFF;
   box-sizing: border-box;
   border-radius: 3px;
   height:1.9em;
-  margin-right:2em;
   button {
     background: #FFFFFF;
     box-sizing: border-box;
@@ -106,6 +124,7 @@ export {
   CardInfo, 
   CardButtonContainer,
   QtyButton,
-  QtySelect
+  QtySelect,
+  QtyContainer
 
 }

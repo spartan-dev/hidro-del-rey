@@ -5,7 +5,16 @@ import {AllCardsContainer} from './productsStyles'
 import compoCards from "./Composition"
 const AllCards = ({ images }) => { 
   return (
-     <AllCardsContainer>
+     <AllCardsContainer  className="
+     uk-grid-match  
+     uk-grid-column-small
+     uk-grid-row-medium
+     uk-child-width-1-2@s 
+     uk-text-center
+     uk-flex-wrap
+     "
+
+     >
        {compoCards.length ? (compoCards.map((item,index) => {
          return (
            <Card
@@ -15,7 +24,8 @@ const AllCards = ({ images }) => {
             bottles
             id={item.id}
             image={item.img}
-            price={item.price}
+            price24={item.price24}
+            price12={item.price12}
             showButtons
            />
          )

@@ -25,6 +25,12 @@ function reducer (state,action){
          shopingCart: state.shopingCart.filter((item) => item.id !== action.id)
       }
     }
+   /*  case "UPDATE_TOTAL":{
+      return{
+        ...state,
+        total: 
+      }
+    } */
       default:
         throw new Error("Bad Action Type")
   }

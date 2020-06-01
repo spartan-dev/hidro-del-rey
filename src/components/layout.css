@@ -30,9 +30,10 @@ main{
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26), 0px 2px 10px rgba(0, 0, 0, 0.16);
   border-radius: 3px;
   font-family: Vollkorn;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 39px;
-color:#ffffff !important;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 39px;
+  color:#ffffff !important;
+  
 }

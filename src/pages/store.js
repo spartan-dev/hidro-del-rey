@@ -16,22 +16,16 @@ import {
 } from "../context/storeContext"
 const Store = () => {
   const state = useContext(GlobalStateContext)
-  const [totalis, setTotal] = useState(0)
+  const [totalis, setTotal] = useState(state.total)
   //const { shopingCart } = state
   useEffect(() => {
     totalPrice()
   })
   const totalPrice = () => {
-    let semi = state.shopingCart
-      .map(item => item.price * item.qty)
+    let price = state.shopingCart
+      .map(item => item.price24 * item.qty + item.price12 * item.qty2)
       .reduce((acc, current) => acc + current, 0)
-    state.total = semi
-    setTotal(
-      state.shopingCart
-        .map(item => item.price * item.qty)
-        .reduce((acc, current) => acc + current, 0)
-    )
-    return (state.total = semi)
+      setTotal(price)
   }
 
   return (
@@ -61,7 +55,7 @@ const Store = () => {
         </ShopCarContainer>
         <div className="uk-flex uk-flex-right uk-flex-middle">
           <div className="uk-flex uk-flex-middle uk-flex-column">
-            <TotalSpan>TOTAL $ {parseFloat(state.total).toFixed(2)} MXN</TotalSpan>
+            <TotalSpan>TOTAL $ {parseFloat(totalis).toFixed(2)} MXN</TotalSpan>
             <Link to="/pedido">
               {" "}
               <button className="buttonMod uk-button  uk-button-large">

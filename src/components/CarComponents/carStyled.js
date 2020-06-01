@@ -101,6 +101,7 @@ const TotalSpan = styled.span`
   text-align: center;
   color: #000000;
   margin-bottom: 2em;
+  margin-top:2em;
 `
 const InfoCart = styled.p`
   font-family: Vollkorn SC;
