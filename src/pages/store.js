@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react"
 import Layout from "../components/layout"
 import Container from "../components/Common/Container"
 import SEO from "../components/seo"
+import html2pdf from 'html2pdf.js'
 import {Link} from 'gatsby'
 import CarItem from "../components/Common/CarItem/CarItem"
 import { PageTitle } from "../components/Common/PageTitle"
@@ -18,8 +19,17 @@ const Store = () => {
   const state = useContext(GlobalStateContext)
   const [totalis, setTotal] = useState(state.total)
   //const { shopingCart } = state
+  let element = document.getElementById("conta")
+  let opt = {
+    margin:       [1,0,1,0],
+    filename:     'myfile.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  {width:100,height:100},
+    jsPDF:        { unit: 'mm', format: 'letter', orientation: 'portrait' }
+  };
   useEffect(() => {
     totalPrice()
+  
   })
   const totalPrice = () => {
     let price = state.shopingCart
@@ -27,11 +37,14 @@ const Store = () => {
       .reduce((acc, current) => acc + current, 0)
       setTotal(price)
   }
-
+const handleClick = ()=> {
+  console.log("yes the click")
+  let worker = html2pdf().set(opt).from(element).save()
+}
   return (
     <Layout>
       <SEO title="store hidromiel" />
-      <Container className="uk-container uk-container-xlarge" uk-grid="true">
+      <Container id="conta" className="uk-container uk-container-xlarge" uk-grid="true">
         <div>
           <PageTitle>Inicio &#62; My Pedido</PageTitle>
         </div>
@@ -58,7 +71,7 @@ const Store = () => {
             <TotalSpan>TOTAL $ {parseFloat(totalis).toFixed(2)} MXN</TotalSpan>
             <Link to="/pedido">
               {" "}
-              <button className="buttonMod uk-button  uk-button-large">
+              <button onClick={handleClick} className="buttonMod uk-button  uk-button-large">
                 Hacer Pedido
               </button>
 

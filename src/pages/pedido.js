@@ -14,6 +14,7 @@ import {
 } from "../context/storeContext"
 const Pedido = () => {
   const state = useContext(GlobalStateContext)
+  console.log(state)
   return (
     <Layout>
       <SEO title="pedidos" />
@@ -34,7 +35,18 @@ const Pedido = () => {
               <InputForm name="nombre" type="text" placeholder="Nombre y Apellido" />
               <InputForm name="telefono" type="text" placeholder="Teléfono" />
               <InputForm name="email" type="text" placeholder="Correo@ejemplo.com" />
-              <InputForm value="6459" name="cantidad" type="number" disabled/>
+              <InputForm value={state.total} name="Total" type="number"/>
+              {state.shopingCart.map(item =>{
+               return ( <>
+                 <textarea name="" id="" cols="30" rows="10">
+                      {`Descripcion del pedido Total:${state.total} \n
+                        cajas de 24 botellas ${item.name}: ${item.qty} \n
+                        cajas de 12 botellas: ${item.qty2}\n
+                      `}
+                 </textarea>
+                </>)
+              })}
+
             </FormSquare>
             <div>
               <button type="submit" className="buttonMod uk-button  uk-button-large">
