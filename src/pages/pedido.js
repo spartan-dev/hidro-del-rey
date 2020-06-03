@@ -38,11 +38,10 @@ const Pedido = () => {
               <InputForm value={state.total} name="Total" type="number"/>
               {state.shopingCart.map(item =>{
                return ( <>
-                 <textarea name="" id="" cols="30" rows="10">
-                      {`Descripcion del pedido Total:${state.total} \n
+                 <textarea name="" id="" cols="30" rows="10" defaultValue={`Descripcion del pedido Total:${state.total} \n
                         cajas de 24 botellas ${item.name}: ${item.qty} \n
                         cajas de 12 botellas: ${item.qty2}\n
-                      `}
+                      `}>
                  </textarea>
                 </>)
               })}
