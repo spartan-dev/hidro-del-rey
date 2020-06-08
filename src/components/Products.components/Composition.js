@@ -21,7 +21,7 @@ const compoCards = [
   { 
     id:1,
     img:Clasica,
-    title: "Hidromiel Clasica ",
+    title: "Hidromiel Clasica",
     text: "Fermento de miel con especias y nuestro mejorado metodo e inigualable sabor!",
     bottles: true,
     price24: 1080,

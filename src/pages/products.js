@@ -5,6 +5,9 @@ import Container from "../components/Common/Container"
 import AllCards from "../components/Products.components/AllCards"
 import HidroBarrel from '../components/Products.components/HidroBarrel'
 import CrystaHorn from '../components/Products.components/CrystaHorn'
+import HidroTempo from '../components/Products.components/HidromielTempo'
+import HidroPremium from '../components/Products.components/HidromielPremium'
+import HidroLinea from '../components/Products.components/HidromielLinea'
 import {
   MainContainer,
   BottonSection,
@@ -46,7 +49,10 @@ const {edges} = data.allFile
             <BottonSection>
               <aside>
                 <div>
-                  <BigButton visible = {visible === "AllCards" ? true:false} onClick={()=> setVisible("AllCards")}>Hidromiel</BigButton>
+                  <BigButton visible = {visible === "AllCards" ? true:false} onClick={()=> setVisible("AllCards")}>Hidromiel <br/>Todas</BigButton>
+                  <BigButton visible = {visible === "HidroLinea" ? true:false} onClick={()=> setVisible("HidroLinea")}>Hidromiel<br/>Linea</BigButton>
+                  <BigButton visible = {visible === "HidroTempo" ? true:false} onClick={()=> setVisible("HidroTempo")}>Hidromiel<br/>Temporada</BigButton>
+                  <BigButton visible = {visible === "HidroPremium" ? true:false} onClick={()=> setVisible("HidroPremium")}>Hidromiel<br/>Premium</BigButton>
                   <BigButton visible = {visible === "HidroBarrel" ? true:false}  onClick={()=> setVisible("HidroBarrel")}>Barril <br/> Desechable</BigButton>
                   <BigButton visible = {visible === "CrystaHorn" ? true:false}   onClick={()=> setVisible("CrystaHorn") }>Cuerno de <br/>Cristal</BigButton>
                 </div>
@@ -64,6 +70,9 @@ const {edges} = data.allFile
               <aside>
                 <Container>
                   {visible === "AllCards" ? <AllCards images={edges}/> : null ||
+                   visible === "HidroLinea"? <HidroLinea/> :null ||
+                   visible === "HidroTempo"? <HidroTempo/> :null ||
+                   visible === "HidroPremium"? <HidroPremium/> :null ||
                    visible === "HidroBarrel"?  <HidroBarrel/>:null ||
                    visible === "CrystaHorn" ? <CrystaHorn/>:null}
                 </Container>

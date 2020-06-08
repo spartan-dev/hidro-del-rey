@@ -13,6 +13,7 @@ const HidroBarrel = () => {
       price="El precio de éste productopuede variar  pregunta por él en nuestras redes sociales"
       bottles={false}
       showButtons={false}
+      showPrices
       />
     </AllCardsContainer>
   )

@@ -12,7 +12,7 @@ import {
   GlobalDispatchContext,
   GlobalStateContext,
 } from "../../../context/storeContext"
-
+import Whats from '../../../images/icons/whats.svg'
 const Cards = ({
   title,
   text,
@@ -21,7 +21,7 @@ const Cards = ({
   price24,
   price12,
   id,
-  index,
+  showPrices,
   showButtons,
 }) => {
   const state = useContext(GlobalStateContext)
@@ -38,7 +38,7 @@ const Cards = ({
     state.shopingCart = [state.shopingCart, box]
   }
   return (
-    <div style={{ marginBottom: "2em" }}>
+    <div  className="cardContainer">
       <div className="uk-card uk-card-default">
         <div className="uk-card-media-top">
           <img src={image} alt={title} width="400" height="200" />
@@ -54,9 +54,17 @@ const Cards = ({
             ) : null}
             {text}
           </CardInfo>
-          <span>{`Caja 24 $${parseFloat(price24).toFixed(2)} MXN`}</span>
-         <br/>
-          <span>{`Caja 12 $${parseFloat(price12).toFixed(2)} MXN`}</span>
+          {!showPrices?(
+            <>
+              <span>{`Caja 24 $${parseFloat(price24).toFixed(2)} MXN`}</span>
+              <br/>
+               <span>{`Caja 12 $${parseFloat(price12).toFixed(2)} MXN`}</span>
+               </>
+          ):(<CardInfo className="uk-width-expand"> 
+          Pregunta por el precio de este producto en linea
+          <a href="https://wa.me/5217151066566"  target="_blank" rel="noopener noreferrer" > <img src={Whats} alt="Whatsapp"/></a>
+          </CardInfo>)}
+        
         </div>{" "}
         {/**fin de header */}
         <hr/>

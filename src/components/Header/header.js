@@ -2,7 +2,6 @@ import React,{useContext} from "react"
 import { HeaderContainer, TopHeader, NavHeader,CarItemsContainer,CarContainer,MenuContainer,MenuContent } from "./styled"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
-import Searchin from "../Common/Search/SearchIn"
 import Img from "gatsby-image"
 import {GlobalStateContext} from '../../context/storeContext'
 const Header = ({ topImage, botImage, images }) => {
@@ -10,7 +9,6 @@ const Header = ({ topImage, botImage, images }) => {
   
   return (
     <HeaderContainer>
-      
       <TopHeader>
         <div>
           <Link to="/">

@@ -11,9 +11,10 @@ const CrystaHorn = () => {
       title="Cuerno de Crystal"
       text="Cuerno de cristal con capacidad de 350 ml "
       image={Horn}
-      price="350"
       botles={false}
-      showButtons={true}
+      showButtons={false}
+      showPrices
+
       />
     </AllCardsContainer>
   )

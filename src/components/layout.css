@@ -37,3 +37,7 @@ main{
   color:#ffffff !important;
   
 }
+.cardContainer{
+  width: 35%;
+  margin-bottom: 2em;
+}

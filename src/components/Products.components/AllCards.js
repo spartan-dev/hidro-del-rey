@@ -9,9 +9,10 @@ const AllCards = ({ images }) => {
      uk-grid-match  
      uk-grid-column-small
      uk-grid-row-medium
-     uk-child-width-1-2@s 
+     uk-child-width-1-3@s 
      uk-text-center
      uk-flex-wrap
+     uk-flex
      "
 
      >

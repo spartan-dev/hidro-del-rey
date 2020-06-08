@@ -24,9 +24,15 @@ const TopHeader = styled.div`
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
-  /*   @media(max-width:415px){
-    display:none;
-  } */
+    @media(max-width:2685px){
+      width:40vw;
+    }
+    @media(max-width:1950px){
+      width:49vw;
+    }
+    @media(max-width:1251px){
+      width:70vw;
+    }
   }
   header {
     width: 75vw;
@@ -36,9 +42,19 @@ const TopHeader = styled.div`
     justify-content:flex-end;
     align-items: center;
     padding-right:4em;
+    @media(max-width:2685px){
+      width:35vw;
+    }
+    @media(max-width:1950px){
+      width:44vw;
+    }
+    @media(max-width:1251px){
+      width:61vw;
+    }
     @media(max-width:415px){
     width:90vw;
   }
+
   }
  
 `
