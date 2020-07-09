@@ -2,6 +2,15 @@ import styled from 'styled-components'
 
 const MainContainer = styled.div`
 display:flex;
+@media(max-width:768px){
+  display:none;
+}
+`
+const GridContainer = styled.div`
+display:none;
+    @media (max-width: 768px) {
+    display: block;
+  }
 `
 const BottonSection = styled.section`
 width:fit-content;
@@ -62,5 +71,6 @@ export {
   CardSection,
   TextAsideContainer,
   AsideTextSection,
-  AllCardsContainer
+  AllCardsContainer,
+  GridContainer
 }

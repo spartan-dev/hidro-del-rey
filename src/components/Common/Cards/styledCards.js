@@ -105,7 +105,7 @@ const QtySelect = styled.div`
     background-color: transparent;
     border:none;
     /* border-bottom: 2px solid rgba(0, 0, 0, 0.1); */
-    max-width: 40px;
+    max-width: 20px;
     max-height: 40px;
     font-family: Vollkorn SC;
     font-style: normal;

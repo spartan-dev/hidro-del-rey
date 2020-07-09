@@ -8,13 +8,15 @@ import CrystaHorn from '../components/Products.components/CrystaHorn'
 import HidroTempo from '../components/Products.components/HidromielTempo'
 import HidroPremium from '../components/Products.components/HidromielPremium'
 import HidroLinea from '../components/Products.components/HidromielLinea'
+import GridTest from "../components/gridtest";
 import {
   MainContainer,
   BottonSection,
   BigButton,
   CardSection,
   TextAsideContainer,
-  AsideTextSection
+  AsideTextSection,
+  GridContainer
 } from "../components/Products.components/productsStyles"
 import SEO from "../components/seo"
 import {useStaticQuery,graphql} from 'gatsby'
@@ -45,6 +47,10 @@ const {edges} = data.allFile
           <PageTitle>Inicio &#62; Productos </PageTitle>
         </div>
         <div style={{ padding: "1em" }}>
+         <GridContainer>
+         <GridTest/>
+         </GridContainer>
+         
           <MainContainer>
             <BottonSection>
               <aside>

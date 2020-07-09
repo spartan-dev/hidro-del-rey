@@ -6,4 +6,10 @@ background:#DAA842;
 height:2em;
 `
 
-export { PriceBadge }
+const TrashIcon = styled.div`
+  @media(min-width:375px){
+    width:27px;
+  }
+`
+
+export { PriceBadge,TrashIcon }

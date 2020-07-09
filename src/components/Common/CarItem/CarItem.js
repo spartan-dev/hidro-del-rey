@@ -5,7 +5,7 @@ import {
   GlobalDispatchContext,
   GlobalStateContext,
 } from "../../../context/storeContext"
-import { PriceBadge } from "./styledCarItem"
+import { PriceBadge,TrashIcon } from "./styledCarItem"
 const CarItem = ({ item }) => {
   const state = useContext(GlobalStateContext)
   const dispatch = useContext(GlobalDispatchContext)
@@ -65,13 +65,13 @@ const CarItem = ({ item }) => {
             <PriceBadge className="uk-badge">{`Unidades: ${item.qty2}`}</PriceBadge>
             <PriceBadge className="uk-badge">{`Precio: ${parso12}`}</PriceBadge>
           </div>
-          <div>
+          <TrashIcon>
             <FontAwesomeIcon
               onClick={() => handleDelete(item.id, item)}
               icon="trash"
               style={{ color: "#000000", cursor: "pointer" }}
             />
-          </div>
+          </TrashIcon>
         </div>
       </div>
 

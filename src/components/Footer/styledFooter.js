@@ -6,8 +6,7 @@ const Footer = styled.footer`
   left: 0px;
   top: 2132px;
   background: #daa842;
-  bottom:0;
-
+  bottom: 0;
 `
 const FContainer = styled.section`
   padding: 15px 65px 15px 65px;
@@ -15,9 +14,9 @@ const FContainer = styled.section`
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
-  @media(max-width:415px){
-     padding:.70em .70em .70em .70em;
-     margin-top:3em;
+  @media (max-width: 415px) {
+    padding: 0.7em 0.7em 0.7em 0.7em;
+    margin-top: 3em;
   }
 `
 const FootBox = styled.div`
@@ -28,11 +27,25 @@ const FootBox = styled.div`
   line-height: 42px;
   text-align: center;
   color: #000000;
-  a{
-    color:transparent;
-    
+  width: 300px;
+  height:${props => props.name? "400px":"45px"};
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media (max-width: 375px) {
+    width: 130vw;
+  height: 80px;
   }
-/*   @media(max-width:415px){
+  a {
+    color: transparent;
+  }
+  span {
+
+    @media (max-width: 375px) {
+      display: none;
+    }
+  }
+  /*   @media(max-width:415px){
     height:0;
   } */
 `

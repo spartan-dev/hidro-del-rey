@@ -6,6 +6,16 @@ const ShopCarContainer = styled.div`
   align-items: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: #ffffff;
+  @media(min-width:769px){
+    width:96%;
+  }
+  @media(min-width:411px){
+    width:96%;
+  }
+/*   @media(max-width:365px){
+    width:60%;
+  }
+   */
 `
 const ShopCarNav = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -24,6 +34,12 @@ const ShopCarNav = styled.div`
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    @media(max-width:375px){
+    width:70vw;
+  }
+  @media(min-width:411px){
+    width:70vw;
+  }
     li {
       margin-right: 1em;
       padding-right: 2em;
@@ -34,6 +50,18 @@ const ShopCarNav = styled.div`
       font-size: 26px;
       line-height: 50px;
       color: #000000;
+      @media(max-width:375px){
+        font-size: 18px;
+      line-height: 30px;
+      margin-right: 15px;
+      padding-right: 2px;
+  }
+  @media(min-width:411px){
+    font-size: 18px;
+      line-height: 30px;
+      margin-right: 15px;
+      padding-right: 2px;
+  }
     }
   }
 `

@@ -23,6 +23,7 @@ const Cards = ({
   id,
   showPrices,
   showButtons,
+  minicards
 }) => {
   const state = useContext(GlobalStateContext)
   const dispatch = useContext(GlobalDispatchContext)
@@ -38,7 +39,7 @@ const Cards = ({
     state.shopingCart = [state.shopingCart, box]
   }
   return (
-    <div  className="cardContainer">
+    <div  className={minicards ? "minicardsContainer" :  "cardContainer"}>
       <div className="uk-card uk-card-default">
         <div className="uk-card-media-top">
           <img src={image} alt={title} width="400" height="200" />

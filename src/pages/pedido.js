@@ -1,13 +1,14 @@
 import React,{useContext} from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Container from "../components/Common/Container"
 import { PageTitle } from "../components/Common/PageTitle"
 import {
   TextHeader,
   FormSquare,
   FormTitle,
   InputForm,
+  Container,
+  ButtonContainer,
 } from "../components/Pedido/pedidosStyled"
 import {
   GlobalStateContext,
@@ -26,7 +27,7 @@ const Pedido = () => {
           favor deja los siguientes datos y en breve nos comunicaremos contigo.
         </TextHeader>
         <form name="Contact Form" action="/succes" method="POST" data-netlify="true">
-          <div className="uk-flex uk-flex-around uk-flex-middle">
+          <div className="uk-flex uk-flex-around@m uk-flex-around@s uk-flex-wrap  uk-flex-middle" >
             <FormSquare className="uk-flex uk-flex-center uk-flex-middle uk-flex-column">
               <div style={{ width: "100%" }} className="uk-flex uk-flex-left">
                 <FormTitle>Solicitud de Datos</FormTitle>
@@ -47,11 +48,11 @@ const Pedido = () => {
               })}
 
             </FormSquare>
-            <div>
+            <ButtonContainer>
               <button type="submit" className="buttonMod uk-button  uk-button-large">
                 Enviar
               </button>
-            </div>
+            </ButtonContainer>
           </div>
         </form>
       </Container>

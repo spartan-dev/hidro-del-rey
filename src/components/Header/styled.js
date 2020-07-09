@@ -4,6 +4,12 @@ const HeaderContainer = styled.div`
   height: 50vh;
   background-color: #fafafa;
 
+  @media(max-width:1700px) {
+    height:35vh;
+  }
+  @media(max-width:1269px) {
+    height:35vh;
+  }
   @media(max-width:1024px) {
     height:25vh;
   }
@@ -131,6 +137,7 @@ const MenuContainer = styled.section`
     display: block;
   }
 `
+
 const MenuContent = styled.section`
   ul {
     background:#d3a341;
@@ -150,4 +157,5 @@ const MenuContent = styled.section`
     }
   }
 `
-export { HeaderContainer, TopHeader, NavHeader, CarItemsContainer,CarContainer, MenuContainer,MenuContent }
+
+export { HeaderContainer, TopHeader, NavHeader, CarItemsContainer,CarContainer, MenuContainer,MenuContent}

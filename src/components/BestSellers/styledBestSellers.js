@@ -28,8 +28,11 @@ height: auto;
     justify-content: space-around;
 }
 @media(max-width:768px){
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap:wrap;
     align-items: center;
+
 }
+
 `
 export {SellerSection, HeaderContainer, CardContainer}
