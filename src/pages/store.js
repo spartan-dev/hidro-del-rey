@@ -71,9 +71,8 @@ const Store = () => {
             <Link to="/pedido">
               {" "}
               <button  className="buttonMod uk-button  uk-button-large">
-                Hacer Pedido
+                {totalis === 0 ?  `Puedes enviarnos un mensaje con tus datos` :  `Hacer Pedido`}
               </button>
-
             </Link>
           </div>
         </div>

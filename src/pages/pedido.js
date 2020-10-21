@@ -1,4 +1,4 @@
-import React,{useContext} from "react"
+import React,{useContext,useEffect,useSate} from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { PageTitle } from "../components/Common/PageTitle"
@@ -14,7 +14,13 @@ import {
   GlobalStateContext,
 } from "../context/storeContext"
 const Pedido = () => {
+
   const state = useContext(GlobalStateContext)
+/*   useEffect(()=>{
+    form.setFieldsValue({
+
+    })
+  }) */
   console.log(state)
   return (
     <Layout>
@@ -36,17 +42,21 @@ const Pedido = () => {
               <InputForm name="nombre" type="text" placeholder="Nombre y Apellido" />
               <InputForm name="telefono" type="text" placeholder="Teléfono" />
               <InputForm name="email" type="text" placeholder="Correo@ejemplo.com" />
-              <InputForm value={state.total} name="Total" type="number"/>
-              {state.shopingCart.map(item =>{
-               return ( <>
-                 <textarea name="" id="" cols="30" rows="10" defaultValue={`Descripcion del pedido Total:${state.total} \n
-                        cajas de 24 botellas ${item.name}: ${item.qty} \n
-                        cajas de 12 botellas: ${item.qty2}\n
-                      `}>
-                 </textarea>
-                </>)
-              })}
+              {state.shopingCart.map((item,idx) =>{
+               return ( <div key={idx} >
+                  
+                <div  style={{display:item.qty === 0 ? "none":"flex", flexDirection:"column", justifyContent:"center",alignItems:"center"}}>
+                <label>{`24 botellas de  ${item.name}`}</label>
+                <InputForm  value={item.qty} name="cantidad" type="text" fontchange/>
+                </div>
+                <div style={{display:item.qty2 === 0 ? "none":"flex", flexDirection:"column", justifyContent:"center",alignItems:"center"}}>
+                <label>{`12 botellas de  ${item.name}`}</label>
+                <InputForm value={item.qty2} name="qty2" type="text" fontchange/>
+                </div>
 
+                </div>)
+              })}
+            <InputForm value={`${state.total}$MXN`} name="Total" type="text" fontchange style={{display: state.total === 0 ? "none": "block"}}/>
             </FormSquare>
             <ButtonContainer>
               <button type="submit" className="buttonMod uk-button  uk-button-large">

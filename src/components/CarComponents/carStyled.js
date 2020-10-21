@@ -139,6 +139,7 @@ const InfoCart = styled.p`
   line-height: 42px;
   text-align: center;
   color: #000000;
+  margin-top:3em;
 `
 export {
   ShopCarContainer,

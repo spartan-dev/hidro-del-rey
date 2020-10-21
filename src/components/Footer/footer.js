@@ -12,7 +12,7 @@ const footer = () => {
         <FootBox style={{width:"187px"}}>
           <Link to="/"><img src={MiniLogo} alt="Hidromiel del rey" sizes="" /></Link>
         </FootBox>
-        <FootBox name className="uk-flex uk-flex-center"style={{  justifyContent: "center",
+        <FootBox  className="uk-flex uk-flex-center"style={{  justifyContent: "center",
     display: "contents"}}>
           <span>By Marc Tello</span>
           </FootBox>

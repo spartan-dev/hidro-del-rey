@@ -22,7 +22,7 @@ const TopHeader = styled.div`
   background-color: #d3a341;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   div {
     width: 75vw;
@@ -139,6 +139,7 @@ const MenuContainer = styled.section`
 `
 
 const MenuContent = styled.section`
+
   ul {
     background:#d3a341;
     position: relative;
@@ -153,8 +154,15 @@ const MenuContent = styled.section`
       line-height: 22px;
       list-style: none;
       text-align: center;
-
+      
     }
+    :hover{
+      background-color:rgba(0, 0, 0, 0.5);
+    }
+    :focus{
+      
+    }
+  
   }
 `
 

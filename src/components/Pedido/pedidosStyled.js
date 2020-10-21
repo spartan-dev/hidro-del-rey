@@ -54,7 +54,7 @@ padding: 1em 1em 0 1em;
 border:none;
 border-bottom: 2px solid #DAA842 !important;
 padding-left:1.2em;
-font-family: Vollkorn;
+font-family:${props => props.fontchange ? "inherit": "Vollkorn" };
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
@@ -62,6 +62,7 @@ line-height: 23px;
 letter-spacing: -1.49012e-09px;
 color: #808080;
 display:${props => props.visible? "none" : null};
+text-align:center;
 `
 const ButtonContainer = styled.div`
 @media(max-width:411px){

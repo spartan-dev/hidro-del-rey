@@ -18,15 +18,14 @@ const Header = ({ topImage, botImage, images }) => {
             />
           </Link>
         </div>
-        <header>
-          {/*  <Searchin icon="search" /> */}
+        <header style={{marginTop:"1em"}}>
           <CarContainer>
           <MenuContainer className="uk-width-1-5">
           <ul className="uk-nav-default " uk-nav="multiple: true">
             <li className="uk-parent">
-              <a href="#" uk-toggle="target: #menu">
+              <div style={{display:"contents"}} uk-toggle="target: #menu">
                 <span style={{color:"#000000"}} uk-icon="icon: menu; ratio: 2"></span>
-              </a>
+              </div>
             </li>
           </ul>
         </MenuContainer>
@@ -72,10 +71,10 @@ const Header = ({ topImage, botImage, images }) => {
                 ><li>Caracter&iacute;sticas</li></Link>
                 <hr/>
                 <Link
-                 style={{ color: "#000000", textDecoration: "none" }}
+                 style={{ color: "#000000", textDecoration: "none", height:"4em"}}
                  to="/products"
                  activeClassName="active"
-                ><li>Productos</li></Link>
+                ><li style={{height:"2em"}}>Productos</li></Link>
             </ul>
           </MenuContent>
       <NavHeader>

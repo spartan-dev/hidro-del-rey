@@ -7,7 +7,8 @@ const Footer = styled.footer`
   top: 2132px;
   background: #daa842;
   bottom: 0;
-`
+/*   position:absolute;
+ */`
 const FContainer = styled.section`
   padding: 15px 65px 15px 65px;
   display: flex;
